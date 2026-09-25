@@ -11,7 +11,7 @@ export default function AboutSection() {
             <h2>Our Advanced Infrastructure &amp; <span className="gold-text">Expert Team</span></h2>
             <div className="divider-short"></div>
             
-            <p style={{ color: 'var(--grey-light)', fontSize: '1.05rem', lineHeight: '1.8', marginBottom: '20px' }}>
+            <p style={{ color: '#555555', fontSize: '1.05rem', lineHeight: '1.8', marginBottom: '20px' }}>
               KS Enterprise is a custom shoe manufacturer in India with advanced production infrastructure and a team of skilled artisans, ensuring precision and quality in every pair.
             </p>
             
@@ -35,7 +35,7 @@ export default function AboutSection() {
 
           <div>
             <div style={{ position: 'relative' }}>
-              <div className="card" style={{ borderRadius: 'var(--rad-xl)', overflow: 'hidden' }}>
+              <div className="card-interactive-luxury" style={{ borderRadius: 'var(--rad-xl)', overflow: 'hidden' }}>
                 <img 
                   src="/assets/images/factory.jpg" 
                   alt="KS Enterprise Advanced Shoe Manufacturing Plant" 
@@ -73,7 +73,7 @@ export default function AboutSection() {
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center'
-              }}>
+              }} className="animate-float">
                 <img 
                   src="/assets/images/logo.png" 
                   alt="KS Enterprise" 

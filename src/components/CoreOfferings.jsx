@@ -46,10 +46,10 @@ export default function CoreOfferings() {
 
         <div className="grid-4">
           {offerings.map((item, idx) => (
-            <div key={idx} className="card-glass" style={{ padding: '32px 24px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+            <div key={idx} className="card-interactive-luxury" style={{ padding: '32px 24px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', background: 'var(--grad-card)' }}>
               <div>
                 <div style={{ fontSize: '2.2rem', marginBottom: '16px' }}>{item.icon}</div>
-                <h4 style={{ fontSize: '1.15rem', color: 'var(--white)', marginBottom: '12px', fontFamily: 'var(--font-accent)' }}>
+                <h4 style={{ fontSize: '1.15rem', color: '#121212', marginBottom: '12px', fontFamily: 'var(--font-accent)' }}>
                   {item.title}
                 </h4>
                 <p style={{ fontSize: '0.88rem', color: 'var(--grey-mid)', lineHeight: '1.7', marginBottom: '24px' }}>

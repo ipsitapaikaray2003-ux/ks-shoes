@@ -70,18 +70,18 @@ export default function ManufacturingSection() {
               <h5 style={{ color: 'var(--gold-light)', marginBottom: '16px', fontFamily: 'var(--font-accent)', textTransform: 'uppercase', letterSpacing: '0.1em', fontSize: '0.8rem' }}>
                 Factory Specifications At A Glance
               </h5>
-              <ul style={{ display: 'flex', flexDirection: 'column', gap: '10px', fontSize: '0.88rem', color: 'var(--grey-light)' }}>
+              <ul style={{ display: 'flex', flexDirection: 'column', gap: '10px', fontSize: '0.88rem', color: '#555555' }}>
                 <li style={{ display: 'flex', justifyContent: 'space-between' }}>
                   <span>Daily Production:</span> 
-                  <strong style={{ color: 'var(--white)' }}>15,000 Pairs</strong>
+                  <strong style={{ color: '#121212' }}>15,000 Pairs</strong>
                 </li>
                 <li style={{ display: 'flex', justifyContent: 'space-between' }}>
                   <span>Facility Floor Area:</span> 
-                  <strong style={{ color: 'var(--white)' }}>85,000 Sq. Ft.</strong>
+                  <strong style={{ color: '#121212' }}>85,000 Sq. Ft.</strong>
                 </li>
                 <li style={{ display: 'flex', justifyContent: 'space-between' }}>
                   <span>Dedicated Assembly Lines:</span> 
-                  <strong style={{ color: 'var(--white)' }}>6 Conveyor Units</strong>
+                  <strong style={{ color: '#121212' }}>6 Conveyor Units</strong>
                 </li>
                 <li style={{ display: 'flex', justifyContent: 'space-between' }}>
                   <span>Certifications:</span> 
@@ -89,7 +89,7 @@ export default function ManufacturingSection() {
                 </li>
                 <li style={{ display: 'flex', justifyContent: 'space-between' }}>
                   <span>Sample Lead Time:</span> 
-                  <strong style={{ color: 'var(--white)' }}>5 to 7 Days</strong>
+                  <strong style={{ color: '#121212' }}>5 to 7 Days</strong>
                 </li>
               </ul>
             </div>

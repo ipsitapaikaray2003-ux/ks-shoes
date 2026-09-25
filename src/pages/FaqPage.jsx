@@ -1,17 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 
 export default function FaqPage() {
   const [activeTab, setActiveTab] = useState('all');
+  const [searchQuery, setSearchQuery] = useState('');
   const [openIndex, setOpenIndex] = useState(0);
 
   const categories = [
     { id: 'all', label: 'All Questions' },
     { id: 'moq', label: 'MOQ & Startups' },
     { id: 'sampling', label: 'Design & Sampling' },
-    { id: 'production', label: 'Manufacturing & Materials' },
-    { id: 'packaging', label: 'Packaging & Private Label' },
-    { id: 'shipping', label: 'Shipping & Global Export' }
+    { id: 'production', label: 'Manufacturing & Soles' },
+    { id: 'packaging', label: 'Packaging & Branding' },
+    { id: 'shipping', label: 'Shipping & Worldwide Export' }
   ];
 
   const allFaqs = [
@@ -67,7 +68,15 @@ export default function FaqPage() {
     }
   ];
 
-  const filteredFaqs = activeTab === 'all' ? allFaqs : allFaqs.filter(f => f.cat === activeTab);
+  const filteredFaqs = useMemo(() => {
+    return allFaqs.filter(f => {
+      const matchCat = activeTab === 'all' || f.cat === activeTab;
+      const matchSearch = searchQuery === '' || 
+        f.q.toLowerCase().includes(searchQuery.toLowerCase()) || 
+        f.a.toLowerCase().includes(searchQuery.toLowerCase());
+      return matchCat && matchSearch;
+    });
+  }, [activeTab, searchQuery]);
 
   const toggle = (idx) => {
     setOpenIndex(openIndex === idx ? -1 : idx);
@@ -93,51 +102,93 @@ export default function FaqPage() {
       {/* FAQ Section */}
       <section className="section">
         <div className="container">
-          {/* Category Filter Tabs */}
-          <div className="filter-bar" style={{ marginBottom: '36px' }}>
-            {categories.map(cat => (
-              <button
-                key={cat.id}
-                className={`filter-btn ${activeTab === cat.id ? 'active' : ''}`}
-                onClick={() => { setActiveTab(cat.id); setOpenIndex(0); }}
-              >
-                {cat.label}
-              </button>
-            ))}
+          {/* Filter Bar & Search */}
+          <div style={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            flexWrap: 'wrap',
+            gap: '20px',
+            marginBottom: '36px'
+          }}>
+            <div className="filter-bar" style={{ marginBottom: 0, display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+              {categories.map(cat => (
+                <button
+                  key={cat.id}
+                  className={`filter-btn ${activeTab === cat.id ? 'active' : ''}`}
+                  onClick={() => { setActiveTab(cat.id); setOpenIndex(0); }}
+                >
+                  {cat.label}
+                </button>
+              ))}
+            </div>
+
+            <div style={{ minWidth: '260px', flex: '0 1 300px' }}>
+              <input 
+                type="text"
+                placeholder="Search FAQ questions..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="form-input"
+                style={{ padding: '10px 16px', fontSize: '0.85rem', background: 'var(--black-card)', borderRadius: 'var(--rad-pill)' }}
+              />
+            </div>
           </div>
 
           {/* Accordion List */}
-          <div className="faq-list">
-            {filteredFaqs.map((faq, idx) => {
-              const isOpen = openIndex === idx;
-              return (
-                <div key={idx} className={`faq-item ${isOpen ? 'open' : ''}`}>
-                  <button 
-                    className="faq-question" 
-                    onClick={() => toggle(idx)}
-                    aria-expanded={isOpen}
-                  >
-                    <span>{faq.q}</span>
-                    <span className="faq-icon">{isOpen ? '✕' : '+'}</span>
-                  </button>
-                  {isOpen && (
-                    <div className="faq-answer">
-                      {faq.a}
-                    </div>
-                  )}
-                </div>
-              );
-            })}
-          </div>
+          {filteredFaqs.length === 0 ? (
+            <div style={{ textAlign: 'center', padding: '60px 20px', color: 'var(--grey-mid)' }}>
+              <h3>No questions match "{searchQuery}"</h3>
+              <p style={{ marginTop: '8px' }}>Feel free to connect directly with our technical team on WhatsApp.</p>
+              <button 
+                className="btn btn-outline btn-sm" 
+                style={{ marginTop: '16px' }}
+                onClick={() => { setSearchQuery(''); setActiveTab('all'); }}
+              >
+                Reset Search
+              </button>
+            </div>
+          ) : (
+            <div className="faq-list">
+              {filteredFaqs.map((faq, idx) => {
+                const isOpen = openIndex === idx;
+                return (
+                  <div key={idx} className={`faq-item card-interactive-luxury ${isOpen ? 'open' : ''}`} style={{ marginBottom: '14px' }}>
+                    <button 
+                      className="faq-question" 
+                      onClick={() => toggle(idx)}
+                      aria-expanded={isOpen}
+                    >
+                      <span style={{ fontSize: '1rem', fontWeight: 600 }}>{faq.q}</span>
+                      <span className="faq-icon" style={{
+                        color: isOpen ? 'var(--gold-primary)' : 'var(--grey-mid)',
+                        transition: 'transform 0.3s ease',
+                        transform: isOpen ? 'rotate(45deg)' : 'rotate(0)'
+                      }}>
+                        +
+                      </span>
+                    </button>
+                    {isOpen && (
+                      <div className="faq-answer" style={{ animation: 'slideUpFade 0.3s ease forwards' }}>
+                        {faq.a}
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          )}
 
-          <div style={{ textAlign: 'center', marginTop: '50px' }}>
-            <h3 style={{ marginBottom: '12px' }}>Have a Specific Project Question?</h3>
-            <p style={{ color: 'var(--grey-mid)', marginBottom: '24px' }}>
-              Speak directly with our technical production team in Agra for immediate guidance.
+          {/* Still Have Questions Box */}
+          <div className="card-glass" style={{ textAlign: 'center', marginTop: '60px', padding: '48px 24px', borderRadius: 'var(--rad-xl)' }}>
+            <span className="tag" style={{ marginBottom: '12px', display: 'inline-block' }}>24/7 Factory Help Desk</span>
+            <h3 style={{ fontSize: '1.8rem', marginBottom: '12px' }}>Have a Specific Technical Question?</h3>
+            <p style={{ color: '#555555', maxWidth: '580px', margin: '0 auto 28px' }}>
+              Speak directly with our Agra production engineering team for instant advice on lasts, upper leathers, MOQ splits, and tooling.
             </p>
             <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
               <Link to="/contact" className="btn btn-primary btn-sm">
-                Submit Project Inquiry
+                Submit Technical RFQ
               </Link>
               <a 
                 href="https://wa.me/911234567890?text=Hello%20KS%20Enterprise%2C%20I%20have%20a%20question%20regarding%20footwear%20manufacturing."
@@ -145,7 +196,7 @@ export default function FaqPage() {
                 rel="noopener noreferrer" 
                 className="btn btn-outline btn-sm"
               >
-                Ask on WhatsApp
+                Chat on WhatsApp Now
               </a>
             </div>
           </div>

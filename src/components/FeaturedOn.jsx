@@ -25,7 +25,7 @@ export default function FeaturedOn() {
       <div className="container">
         <div style={{ textAlign: 'center', marginBottom: '32px' }}>
           <span className="section-label" style={{ justifyContent: 'center' }}>Industry Recognition</span>
-          <h3 style={{ fontSize: '1.4rem', color: 'var(--white)' }}>
+          <h3 style={{ fontSize: '1.4rem', color: '#121212' }}>
             As Seen In &amp; <span className="gold-text">Featured On</span>
           </h3>
           <p style={{ color: 'var(--grey-mid)', fontSize: '0.9rem', maxWidth: '580px', margin: '8px auto 0' }}>
@@ -46,7 +46,7 @@ export default function FeaturedOn() {
               }}>
                 {item.name}
               </div>
-              <h5 style={{ fontSize: '0.92rem', color: 'var(--white)', marginBottom: '8px', lineHeight: 1.4 }}>
+              <h5 style={{ fontSize: '0.92rem', color: '#121212', marginBottom: '8px', lineHeight: 1.4 }}>
                 "{item.tagline}"
               </h5>
               <p style={{ fontSize: '0.82rem', color: 'var(--grey-mid)', lineHeight: 1.6 }}>

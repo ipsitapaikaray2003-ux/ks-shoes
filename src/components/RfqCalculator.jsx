@@ -139,7 +139,7 @@ export default function RfqCalculator({ selectedCategory, onCategoryChange }) {
 
             <div>
               <div className="calc-result-box">
-                <h4 style={{ color: 'var(--white)', fontFamily: 'var(--font-accent)', textTransform: 'uppercase', letterSpacing: '0.08em', fontSize: '0.95rem', marginBottom: '8px' }}>
+                <h4 style={{ color: '#121212', fontFamily: 'var(--font-accent)', textTransform: 'uppercase', letterSpacing: '0.08em', fontSize: '0.95rem', marginBottom: '8px' }}>
                   Live Project Specifications
                 </h4>
 

@@ -70,7 +70,7 @@ export default function ProductModal({ product, onClose, onInquire }) {
                       border: '1px solid rgba(201,168,76,0.2)',
                       padding: '4px 10px',
                       borderRadius: 'var(--rad-pill)',
-                      color: 'var(--grey-light)'
+                      color: '#555555'
                     }}>
                       ✓ {feat}
                     </span>

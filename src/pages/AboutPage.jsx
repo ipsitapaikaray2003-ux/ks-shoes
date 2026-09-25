@@ -1,226 +1,152 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 export default function AboutPage() {
-  const comparisonData = [
-    {
-      feature: 'Minimum Order Quantity (MOQ)',
-      traditional: '1,000 to 5,000 pairs per style (High inventory risk)',
-      ksEnterprise: '200 to 300 pairs per style (Low MOQ Startup Tier)'
-    },
-    {
-      feature: 'Production Model',
-      traditional: 'Frequently outsourced to third-party sub-contractors',
-      ksEnterprise: '100% In-House Production in Agra (Absolute control)'
-    },
-    {
-      feature: 'Sample Turnaround',
-      traditional: '25 to 45 days with multiple iteration delays',
-      ksEnterprise: '5 to 7 working days with dedicated sample line'
-    },
-    {
-      feature: 'Turnkey Branding & Packaging',
-      traditional: 'Generic brown cartons; client handles boxes & labeling',
-      ksEnterprise: 'Full luxury packaging: gold-foil rigid boxes, dust bags, barcodes'
-    },
-    {
-      feature: 'Design & Tech Pack Support',
-      traditional: 'Requires client to supply factory-ready technical drawings',
-      ksEnterprise: 'Complete 3D CAD modeling, material consulting, and tech packs'
-    },
-    {
-      feature: 'Quality Assurance Testing',
-      traditional: 'Basic visual check before container dispatch',
-      ksEnterprise: 'In-house SATRA testing lab: flex, Martindale rub, sole adhesion'
-    }
-  ];
-
   return (
-    <div className="about-page">
-      {/* Page Hero Banner */}
-      <section className="page-hero">
-        <div className="container">
-          <div className="breadcrumb">
-            <Link to="/">Home</Link>
-            <span className="sep">/</span>
-            <span className="current">About Heritage</span>
-          </div>
-          <h1>Decades of Mastery, <span className="gold-text">Built for Global Brands</span></h1>
-          <p>
-            Operating in Agra — the historic capital of Indian footwear craftsmanship — KS Enterprise empowers D2C brands, startups, and international retailers with complete in-house shoe manufacturing.
-          </p>
+    <div style={{ background: '#050505', color: '#ffffff', minHeight: '100vh', fontFamily: '"Inter", sans-serif', overflowX: 'hidden' }}>
+      
+      {/* Hero Section */}
+      <section style={{ 
+        position: 'relative', 
+        height: '80vh', 
+        display: 'flex', 
+        alignItems: 'center', 
+        justifyContent: 'center',
+        backgroundImage: 'linear-gradient(to bottom, rgba(5,5,5,0.3), #050505), url("/assets/images/hero_luxury_artisan.jpg")',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed'
+      }}>
+        <div style={{ textAlign: 'center', zIndex: 2, padding: '0 5%' }}>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+          >
+            <span style={{ color: 'var(--gold-primary)', fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '0.3em', fontWeight: 600, display: 'block', marginBottom: '20px' }}>
+              Our Legacy
+            </span>
+            <h1 style={{ fontSize: 'clamp(40px, 8vw, 90px)', fontWeight: 800, margin: '0 0 24px 0', letterSpacing: '-0.03em', lineHeight: 1.1, color: '#ffffff' }}>
+              THE ART OF <br /> <span style={{ color: 'var(--gold-primary)' }}>SHOEMAKING</span>
+            </h1>
+            <p style={{ color: '#bbb', fontSize: '1.2rem', maxWidth: '600px', margin: '0 auto', lineHeight: 1.6 }}>
+              Decades of mastering the perfect balance between traditional Indian craftsmanship and global manufacturing innovation.
+            </p>
+          </motion.div>
         </div>
       </section>
 
-      {/* Origin Story & Vision */}
-      <section className="section">
-        <div className="container">
-          <div className="grid-2" style={{ alignItems: 'center', gap: '60px' }}>
-            <div>
-              <div className="section-label">Who We Are</div>
-              <h2>Making Footwear Manufacturing <span className="gold-text">Agile &amp; Accessible</span></h2>
-              <div className="divider-short"></div>
-              <p style={{ color: 'var(--grey-light)', fontSize: '1.05rem', lineHeight: '1.8', marginBottom: '20px' }}>
-                KS Enterprise was established with a singular vision: to dismantle the barriers of traditional footwear manufacturing and offer a seamless bridge from initial shoe design to worldwide retail delivery.
-              </p>
-              <p style={{ color: 'var(--grey-mid)', fontSize: '0.95rem', lineHeight: '1.8', marginBottom: '20px' }}>
-                For decades, emerging footwear founders struggled to find reliable factories willing to accept small order quantities without compromising on craftsmanship, European lasting standards, or material integrity.
-              </p>
-              <p style={{ color: 'var(--grey-mid)', fontSize: '0.95rem', lineHeight: '1.8', marginBottom: '30px' }}>
-                Today, our 85,000 sq. ft. industrial campus in Agra combines computerized Swiss cutting tables, multi-conveyor lasting lines, and a dedicated rapid prototyping workshop, serving over 200+ D2C businesses and retail chains worldwide.
-              </p>
-
-              <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
-                <Link to="/services" className="btn btn-primary btn-sm">
-                  Our Manufacturing Services
-                </Link>
-                <Link to="/contact" className="btn btn-outline btn-sm">
-                  Book a Factory Tour
-                </Link>
-              </div>
-            </div>
-
-            <div>
-              <div style={{ position: 'relative' }}>
-                <div className="card" style={{ borderRadius: 'var(--rad-xl)', overflow: 'hidden' }}>
-                  <img 
-                    src="/assets/images/factory.jpg" 
-                    alt="KS Enterprise Agra Footwear Campus" 
-                    style={{ width: '100%', height: '480px', objectFit: 'cover' }}
-                  />
-                  <div style={{
-                    position: 'absolute',
-                    inset: 0,
-                    background: 'linear-gradient(to top, rgba(8,8,8,0.92) 0%, transparent 60%)',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    justifyContent: 'flex-end',
-                    padding: '32px'
-                  }}>
-                    <span className="tag" style={{ alignSelf: 'flex-start', marginBottom: '8px' }}>
-                      Agra Footwear Industrial Hub
-                    </span>
-                    <h4 style={{ fontSize: '1.3rem', marginBottom: '6px' }}>15,000 Pairs Daily Capacity</h4>
-                    <p style={{ fontSize: '0.85rem', color: 'var(--grey-mid)' }}>
-                      Complete in-house control over cutting, lasting, assembly, and testing.
-                    </p>
-                  </div>
-                </div>
-
-                <div style={{
-                  position: 'absolute',
-                  top: '-20px',
-                  right: '-20px',
-                  background: 'var(--black-elevated)',
-                  border: '1.5px solid var(--gold-primary)',
-                  padding: '16px 22px',
-                  borderRadius: 'var(--rad-md)',
-                  boxShadow: 'var(--shadow-gold-sm)',
-                  textAlign: 'center'
-                }}>
-                  <div style={{ fontSize: '1.8rem', color: 'var(--gold-primary)', fontFamily: 'var(--font-display)', fontWeight: 700 }}>
-                    100%
-                  </div>
-                  <div style={{ fontSize: '0.72rem', color: 'var(--white)', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
-                    In-House Production
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+      {/* Heritage Section */}
+      <section style={{ padding: '120px 5%', maxWidth: '1400px', margin: '0 auto' }}>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '80px', alignItems: 'center' }}>
+          <motion.div 
+            style={{ flex: '1 1 500px' }}
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 style={{ fontSize: '3rem', fontWeight: 700, marginBottom: '24px', letterSpacing: '-0.02em', color: '#ffffff' }}>Crafting Excellence <br/>Since Day One</h2>
+            <div style={{ width: '60px', height: '4px', background: 'var(--gold-primary)', marginBottom: '32px' }}></div>
+            <p style={{ fontSize: '1.15rem', color: '#aaa', lineHeight: 1.8, marginBottom: '24px' }}>
+              Born in Agra, the historic heart of Indian leather craftsmanship, KS Shoes began with a simple mission: to build footwear that commands respect. For decades, we have honed our techniques, working closely with master artisans who have passed their skills down through generations.
+            </p>
+            <p style={{ fontSize: '1.15rem', color: '#aaa', lineHeight: 1.8 }}>
+              Today, our heritage is our strongest asset. Every cut, every stitch, and every lasting process is a testament to our unyielding commitment to quality. We don't just manufacture shoes; we engineer confidence.
+            </p>
+          </motion.div>
+          
+          <motion.div 
+            style={{ flex: '1 1 500px', position: 'relative' }}
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8 }}
+          >
+            <div style={{ position: 'absolute', top: '-20px', left: '-20px', width: '100%', height: '100%', border: '1px solid var(--gold-primary)', borderRadius: '16px', zIndex: 0 }}></div>
+            <img src="/assets/images/craft_stitching.jpg" alt="Artisan stitching" style={{ width: '100%', borderRadius: '16px', position: 'relative', zIndex: 1, boxShadow: '0 20px 40px rgba(0,0,0,0.5)', filter: 'contrast(1.1) grayscale(20%)' }} />
+          </motion.div>
         </div>
       </section>
 
-      {/* Comparison Matrix: Traditional Factory vs KS Enterprise */}
-      <section className="section" style={{ background: 'var(--black-main)' }}>
-        <div className="container">
-          <div className="section-head">
-            <div className="section-label" style={{ justifyContent: 'center' }}>Why Brands Choose Us</div>
-            <h2>Traditional Factories vs. <span className="gold-text">KS Enterprise</span></h2>
-            <p>See why over 200+ D2C brands, designers, and retailers trust KS Enterprise as their exclusive manufacturing partner.</p>
-          </div>
+      {/* Global Scale Section */}
+      <section style={{ padding: '120px 5%', background: '#0a0a0a' }}>
+        <div style={{ maxWidth: '1400px', margin: '0 auto', display: 'flex', flexWrap: 'wrap-reverse', gap: '80px', alignItems: 'center' }}>
+          <motion.div 
+            style={{ flex: '1 1 500px', position: 'relative' }}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8 }}
+          >
+            <img src="/assets/images/hightech_factory_cinematic.jpg" alt="Modern Factory" style={{ width: '100%', borderRadius: '16px', boxShadow: '0 20px 50px rgba(0,0,0,0.7)', filter: 'contrast(1.1)' }} />
+          </motion.div>
 
-          <div style={{
-            background: 'var(--black-card)',
-            border: '1px solid var(--black-border)',
-            borderRadius: 'var(--rad-xl)',
-            overflow: 'hidden',
-            boxShadow: 'var(--shadow-deep)'
+          <motion.div 
+            style={{ flex: '1 1 500px' }}
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 style={{ fontSize: '3rem', fontWeight: 700, marginBottom: '24px', letterSpacing: '-0.02em', color: 'var(--gold-primary)' }}>Global Scale.<br/>Boutique Precision.</h2>
+            <p style={{ fontSize: '1.15rem', color: '#aaa', lineHeight: 1.8, marginBottom: '24px' }}>
+              While our roots are deeply traditional, our infrastructure is fiercely modern. We operate state-of-the-art facilities equipped with the latest footwear engineering technologies. This unique blend allows us to cater to massive bulk production without ever compromising on the meticulous detail of a single pair.
+            </p>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px', marginTop: '40px' }}>
+              <div style={{ borderLeft: '2px solid var(--gold-primary)', paddingLeft: '20px' }}>
+                <h4 style={{ fontSize: '2rem', fontWeight: 800, margin: '0 0 5px 0', color: '#ffffff' }}>5M+</h4>
+                <p style={{ color: '#777', fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Pairs Manufactured</p>
+              </div>
+              <div style={{ borderLeft: '2px solid var(--gold-primary)', paddingLeft: '20px' }}>
+                <h4 style={{ fontSize: '2rem', fontWeight: 800, margin: '0 0 5px 0', color: '#ffffff' }}>15+</h4>
+                <p style={{ color: '#777', fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Countries Served</p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Leadership Section */}
+      <section style={{ padding: '140px 5%', maxWidth: '1000px', margin: '0 auto', textAlign: 'center' }}>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
+          <span style={{ color: 'var(--gold-primary)', fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '0.3em', fontWeight: 600, display: 'block', marginBottom: '20px' }}>
+            Leadership
+          </span>
+          <h2 style={{ fontSize: '3.5rem', fontWeight: 800, margin: '0 0 60px 0', letterSpacing: '-0.02em', color: '#ffffff' }}>
+            Visionary Direction
+          </h2>
+
+          <div style={{ 
+            background: 'linear-gradient(145deg, #111, #0a0a0a)', 
+            padding: '60px 40px', 
+            borderRadius: '24px',
+            border: '1px solid rgba(214,180,90,0.15)',
+            boxShadow: '0 30px 60px rgba(0,0,0,0.4)',
+            position: 'relative'
           }}>
-            <div style={{
-              display: 'grid',
-              gridTemplateColumns: '1.2fr 1.4fr 1.4fr',
-              background: 'var(--black-elevated)',
-              padding: '20px 28px',
-              borderBottom: '1px solid var(--black-border)',
-              fontFamily: 'var(--font-accent)',
-              fontSize: '0.85rem',
-              textTransform: 'uppercase',
-              letterSpacing: '0.08em'
-            }}>
-              <span style={{ color: 'var(--grey-mid)' }}>Evaluation Criteria</span>
-              <span style={{ color: 'var(--grey-dark)' }}>Traditional Factory</span>
-              <span style={{ color: 'var(--gold-primary)', fontWeight: 700 }}>KS Enterprise Advantage</span>
+            {/* Elegant Quote Icon */}
+            <div style={{ position: 'absolute', top: '-30px', left: '50%', transform: 'translateX(-50%)', background: '#050505', padding: '10px 20px', borderRadius: '50px', border: '1px solid rgba(214,180,90,0.3)' }}>
+              <span style={{ fontSize: '2rem', color: 'var(--gold-primary)', lineHeight: 1 }}>❝</span>
             </div>
 
-            {comparisonData.map((row, idx) => (
-              <div 
-                key={idx}
-                style={{
-                  display: 'grid',
-                  gridTemplateColumns: '1.2fr 1.4fr 1.4fr',
-                  padding: '22px 28px',
-                  borderBottom: idx < comparisonData.length - 1 ? '1px solid rgba(255,255,255,0.05)' : 'none',
-                  fontSize: '0.88rem',
-                  alignItems: 'center',
-                  background: idx % 2 === 1 ? 'rgba(255,255,255,0.015)' : 'transparent'
-                }}
-              >
-                <strong style={{ color: 'var(--white)', fontFamily: 'var(--font-accent)' }}>
-                  {row.feature}
-                </strong>
-                <span style={{ color: 'var(--grey-dark)', paddingRight: '16px' }}>
-                  ✕ {row.traditional}
-                </span>
-                <span style={{ color: 'var(--gold-light)', fontWeight: 600 }}>
-                  ✓ {row.ksEnterprise}
-                </span>
-              </div>
-            ))}
+            <p style={{ fontSize: '1.4rem', color: '#fff', fontStyle: 'italic', lineHeight: 1.8, marginBottom: '40px', fontWeight: 300 }}>
+              "Our vision has always been to bridge the gap between traditional Indian craftsmanship and global manufacturing standards. By providing scalable, robust solutions alongside massive bulk capacity, we empower modern D2C brands to build the true future of global footwear."
+            </p>
+            
+            <div>
+              <h3 style={{ fontSize: '1.5rem', fontWeight: 700, color: 'var(--gold-primary)', margin: '0 0 5px 0' }}>Abhishek Singhal</h3>
+              <p style={{ color: '#888', textTransform: 'uppercase', letterSpacing: '0.1em', fontSize: '0.85rem', margin: 0 }}>Founder & Managing Director</p>
+            </div>
           </div>
-        </div>
+        </motion.div>
       </section>
 
-      {/* Leadership & Artisans */}
-      <section className="section">
-        <div className="container">
-          <div className="section-head">
-            <div className="section-label" style={{ justifyContent: 'center' }}>Master Craftsmen &amp; Engineers</div>
-            <h2>Behind Every Pair: <span className="gold-text">Decades of Expertise</span></h2>
-            <p>Our team brings together hereditary Agra shoe artisans with Italian-trained CAD pattern masters.</p>
-          </div>
-
-          <div className="grid-3">
-            <div className="feature-card">
-              <div className="feature-icon">👞</div>
-              <h4>100+ Master Artisans</h4>
-              <p>Specialists in hand-lasting, upper skiving, welt stitching, and antiqued hand-burnishing with over 15 years average bench experience.</p>
-            </div>
-
-            <div className="feature-card">
-              <div className="feature-icon">📐</div>
-              <h4>10+ CAD &amp; Tech Designers</h4>
-              <p>Dedicated digital pattern grading, CNC sole mold engineers, and 3D last sculpting experts ensuring anatomical foot health.</p>
-            </div>
-
-            <div className="feature-card">
-              <div className="feature-icon">🔬</div>
-              <h4>Full QA Lab Personnel</h4>
-              <p>In-house quality inspectors monitoring raw leather grading, seam adhesion, tensile strength, and finished box packing.</p>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }

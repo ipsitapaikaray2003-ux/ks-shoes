@@ -4,21 +4,24 @@ import ScrollToTop from './components/ScrollToTop';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ProductModal from './components/ProductModal';
-import WhatsAppFloat from './components/WhatsAppFloat';
+import BackToTop from './components/BackToTop';
 import Toast from './components/Toast';
 
-// Pages
+// 8 Dedicated Pages
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
-import ServicesPage from './pages/ServicesPage';
+import ManufacturingPage from './pages/ManufacturingPage';
 import ProductsPage from './pages/ProductsPage';
-import CorporateGiftingPage from './pages/CorporateGiftingPage';
-import CaseStudiesPage from './pages/CaseStudiesPage';
-import FaqPage from './pages/FaqPage';
+import ServicesPage from './pages/ServicesPage';
+import ProjectsPage from './pages/ProjectsPage';
+import QualityTechnologyPage from './pages/QualityTechnologyPage';
 import ContactPage from './pages/ContactPage';
+import FaqPage from './pages/FaqPage';
+import CategoryPage from './pages/CategoryPage';
+
+import ErrorBoundary from './components/ErrorBoundary';
 
 export default function App() {
-  const [activeCategory, setActiveCategory] = useState('all');
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [toastMessage, setToastMessage] = useState('');
 
@@ -30,79 +33,51 @@ export default function App() {
     setSelectedProduct(null);
   };
 
-  const handleInquireProduct = (product) => {
-    if (product?.category) {
-      setActiveCategory(product.category);
-    }
-  };
-
   const handleShowToast = (msg) => {
     setToastMessage(msg);
   };
 
   return (
     <BrowserRouter>
+      <ErrorBoundary>
       <ScrollToTop />
-      <div className="app-container">
-        {/* Global Luxury Navigation */}
+      <div className="app-container" style={{ background: '#FAF9F6', minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+        {/* Transparent-to-Scrolled Sticky Navbar */}
         <Navbar />
 
         {/* Multi-Page Routes */}
-        <Routes>
-          <Route 
-            path="/" 
-            element={
-              <HomePage 
-                activeCategory={activeCategory}
-                onCategoryChange={setActiveCategory}
-                onOpenModal={handleOpenModal}
-                onInquireProduct={handleInquireProduct}
-                onShowToast={handleShowToast}
-              />
-            } 
-          />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/services" element={<ServicesPage />} />
-          <Route 
-            path="/products" 
-            element={
-              <ProductsPage 
-                onOpenModal={handleOpenModal}
-                onInquireProduct={handleInquireProduct}
-              />
-            } 
-          />
-          <Route 
-            path="/corporate-gifting" 
-            element={<CorporateGiftingPage onShowToast={handleShowToast} />} 
-          />
-          <Route path="/case-studies" element={<CaseStudiesPage />} />
-          <Route path="/faq" element={<FaqPage />} />
-          <Route 
-            path="/contact" 
-            element={<ContactPage onShowToast={handleShowToast} />} 
-          />
-        </Routes>
+        <main style={{ flex: 1 }}>
+          <Routes>
+            <Route path="/" element={<HomePage onOpenModal={handleOpenModal} onShowToast={handleShowToast} />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/manufacturing" element={<ManufacturingPage />} />
+            <Route path="/products" element={<ProductsPage onOpenModal={handleOpenModal} />} />
+            <Route path="/services" element={<ServicesPage />} />
+            <Route path="/category" element={<CategoryPage />} />
+            <Route path="/projects" element={<ProjectsPage />} />
+            <Route path="/case-studies" element={<ProjectsPage />} />
+            <Route path="/quality" element={<QualityTechnologyPage />} />
+            <Route path="/contact" element={<ContactPage onShowToast={handleShowToast} />} />
+            <Route path="/faq" element={<FaqPage />} />
+          </Routes>
+        </main>
 
-        {/* Global Luxury Footer */}
+        {/* Global Industrial-Luxury Footer with Qubnix Technology attribution */}
         <Footer />
 
-        {/* Technical Product Modal */}
+        {/* Technical B2B Spec Sheet Modal */}
         <ProductModal 
           product={selectedProduct}
           onClose={handleCloseModal}
-          onInquire={handleInquireProduct}
         />
 
-        {/* Floating WhatsApp Assistant */}
-        <WhatsAppFloat />
+        {/* Circular Scroll Progress Ring */}
+        <BackToTop />
 
-        {/* Floating Notification Toast */}
-        <Toast 
-          message={toastMessage} 
-          onClose={() => setToastMessage('')} 
-        />
+        {/* Toast Alerts */}
+        <Toast message={toastMessage} onClose={() => setToastMessage('')} />
       </div>
+      </ErrorBoundary>
     </BrowserRouter>
   );
 }

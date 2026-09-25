@@ -23,6 +23,13 @@ export default function BrowseCustomShoes() {
       image: "/assets/images/kids_collection.jpg",
       link: "/products?cat=kids",
       desc: "Ultra-Lightweight Playground Running Shoes, Durable Velcro Straps, Non-Marking Soles, and Youth Trainers."
+    },
+    {
+      title: "Corporate & VIP Gifting",
+      badge: "Corporate Suites",
+      image: "/assets/images/corporate_gifting.jpg",
+      link: "/corporate-gifting",
+      desc: "Custom Debossed Executive Sneakers, Rigid Gold Foil Presentation Boxes, and Milestone Gifting Packages."
     }
   ];
 
@@ -30,31 +37,29 @@ export default function BrowseCustomShoes() {
     <section className="section" id="browse-custom" style={{ background: 'var(--black-main)', borderTop: '1px solid var(--black-border)' }}>
       <div className="container">
         <div className="section-head text-center">
-          <div className="section-label" style={{ justifyContent: 'center' }}>Sneaker &amp; Athletic Production</div>
-          <h2>Browse <span className="gold-text">Custom Sneakers &amp; Sports Shoes</span></h2>
+          <div className="section-label" style={{ justifyContent: 'center' }}>Sneaker &amp; Footwear Production</div>
+          <h2>Browse <span className="gold-text">Custom Shoes &amp; Sneakers</span></h2>
           <p style={{ maxWidth: '650px', margin: '0 auto' }}>
-            Choose from our specialized sneaker manufacturing categories. Fully customizable with your private label, bespoke outsole mold development, and signature custom packaging.
+            Choose from our specialized manufacturing categories. Fully customizable with your private label, bespoke outsole mold development, and signature custom packaging.
           </p>
         </div>
 
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-          gap: '28px'
+          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+          gap: '24px'
         }}>
           {categories.map((cat, idx) => (
             <div 
               key={idx} 
-              className="card" 
+              className="card-interactive-luxury" 
               style={{
-                borderRadius: '16px',
+                borderRadius: '18px',
                 overflow: 'hidden',
                 position: 'relative',
                 display: 'flex',
                 flexDirection: 'column',
-                border: '1px solid var(--black-border)',
-                background: 'var(--black-card)',
-                transition: 'all 0.35s ease'
+                background: 'var(--black-card)'
               }}
             >
               <div style={{ 
@@ -99,7 +104,7 @@ export default function BrowseCustomShoes() {
 
               <div style={{ padding: '24px', flexGrow: 1, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
                 <div>
-                  <h3 style={{ fontSize: '1.25rem', color: 'var(--white)', marginBottom: '8px' }}>
+                  <h3 style={{ fontSize: '1.25rem', color: '#121212', marginBottom: '8px' }}>
                     {cat.title}
                   </h3>
                   <p style={{ fontSize: '0.85rem', color: 'var(--grey-mid)', lineHeight: '1.6', marginBottom: '20px' }}>

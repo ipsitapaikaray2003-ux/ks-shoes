@@ -107,22 +107,51 @@ export default function BrandJourney() {
           <p>We don't just manufacture shoes — we help entrepreneurs, D2C startups, and retail chains build iconic footwear brands from scratch.</p>
         </div>
 
-        {/* Step Navigation Tabs */}
-        <div className="journey-tabs-wrapper">
-          {steps.map((step, idx) => (
-            <button
-              key={idx}
-              className={`journey-tab-btn ${activeStep === idx ? 'active' : ''}`}
-              onClick={() => setActiveStep(idx)}
-            >
-              <span className="journey-tab-num">{step.num}</span>
-              <span>{step.short}</span>
-            </button>
-          ))}
+        {/* Step Navigation Tabs with Progress Line */}
+        <div style={{ position: 'relative', marginBottom: '32px' }}>
+          {/* Animated Connecting Progress Line */}
+          <div style={{
+            position: 'absolute',
+            top: '22px',
+            left: '30px',
+            right: '30px',
+            height: '2px',
+            background: 'var(--black-border)',
+            zIndex: 0
+          }}>
+            <div style={{
+              height: '100%',
+              background: 'var(--grad-gold)',
+              width: `${(activeStep / (steps.length - 1)) * 100}%`,
+              transition: 'width 0.45s cubic-bezier(0.16, 1, 0.3, 1)',
+              boxShadow: '0 0 10px rgba(201, 168, 76, 0.6)'
+            }} />
+          </div>
+
+          <div className="journey-tabs-wrapper" style={{ position: 'relative', zIndex: 1 }}>
+            {steps.map((step, idx) => (
+              <button
+                key={idx}
+                className={`journey-tab-btn ${activeStep === idx ? 'active' : ''}`}
+                onClick={() => setActiveStep(idx)}
+                style={{
+                  transition: 'all 0.3s ease',
+                  transform: activeStep === idx ? 'scale(1.04)' : 'scale(1)'
+                }}
+              >
+                <span className="journey-tab-num" style={{
+                  boxShadow: activeStep === idx ? '0 0 15px rgba(201, 168, 76, 0.5)' : 'none'
+                }}>
+                  {step.num}
+                </span>
+                <span>{step.short}</span>
+              </button>
+            ))}
+          </div>
         </div>
 
         {/* Active Stage Display Card */}
-        <div className="journey-display-card">
+        <div className="journey-display-card card-interactive-luxury" style={{ padding: 'clamp(28px, 4vw, 48px)' }}>
           <div className="grid-2" style={{ alignItems: 'center', gap: '40px' }}>
             <div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px' }}>
@@ -130,15 +159,35 @@ export default function BrandJourney() {
                 <span style={{ fontSize: '0.8rem', color: 'var(--grey-mid)' }}>⏱ {current.turnaround}</span>
               </div>
 
-              <h3 style={{ fontSize: '1.6rem', marginBottom: '8px', color: 'var(--white)' }}>
+              <h3 style={{ fontSize: '1.6rem', marginBottom: '8px', color: '#121212' }}>
                 {current.title}
               </h3>
               <p style={{ color: 'var(--gold-primary)', fontSize: '0.95rem', fontWeight: '600', marginBottom: '18px' }}>
                 {current.subtitle}
               </p>
-              <p style={{ color: 'var(--grey-light)', fontSize: '0.92rem', lineHeight: '1.8', marginBottom: '24px' }}>
+              <p style={{ color: '#555555', fontSize: '0.92rem', lineHeight: '1.8', marginBottom: '24px' }}>
                 {current.description}
               </p>
+
+              {/* Step Forward / Backward Controls */}
+              <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '24px' }}>
+                <button
+                  onClick={() => setActiveStep(prev => Math.max(0, prev - 1))}
+                  disabled={activeStep === 0}
+                  className="btn btn-outline btn-sm"
+                  style={{ opacity: activeStep === 0 ? 0.35 : 1, cursor: activeStep === 0 ? 'not-allowed' : 'pointer' }}
+                >
+                  &larr; Previous Stage
+                </button>
+                <button
+                  onClick={() => setActiveStep(prev => Math.min(steps.length - 1, prev + 1))}
+                  disabled={activeStep === steps.length - 1}
+                  className="btn btn-primary btn-sm"
+                  style={{ opacity: activeStep === steps.length - 1 ? 0.35 : 1, cursor: activeStep === steps.length - 1 ? 'not-allowed' : 'pointer' }}
+                >
+                  Next Stage &rarr;
+                </button>
+              </div>
 
               <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
                 <a 

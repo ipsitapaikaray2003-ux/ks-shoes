@@ -1,120 +1,138 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Factory, ShieldCheck, Cpu, TrendingUp, Users, Truck, Award, Layers, ArrowRight } from 'lucide-react';
 
 export default function WhyChooseUsSection() {
-  const reasons = [
+  const differentiators = [
     {
-      icon: '🎯',
-      title: 'End-to-End Service',
-      desc: 'From initial design sketches and tech packs to bulk lasting, custom boxing, and doorstep delivery.'
+      icon: <Factory size={24} />,
+      title: 'Advanced Manufacturing',
+      desc: 'Computerized Swiss cutting tables, Italian automated conveyor lasting, and multi-axis hydraulic presses for uniform bonding.'
     },
     {
-      icon: '🚀',
-      title: 'Low MOQ for Startups',
-      desc: 'Launch without excessive inventory debt with accessible low MOQ tiers starting from 200–300 pairs.'
+      icon: <ShieldCheck size={24} />,
+      title: 'Consistent Quality Standards',
+      desc: '100% in-line inspection and laboratory flexing machines ensuring zero defect variance across production runs (AQL 1.0).'
     },
     {
-      icon: '🏭',
-      title: 'Bulk Production Capability',
-      desc: 'High-speed automated lasting conveyor lines delivering consistent quality at scalable bulk volumes.'
+      icon: <Cpu size={24} />,
+      title: 'Custom Tooling & Moulds',
+      desc: 'Complete proprietary mold engineering for custom outsoles, dual-density EVA midsoles, and unique brand lasts.'
     },
     {
-      icon: '🎨',
-      title: 'Expert Design Support',
-      desc: 'In-house footwear designers, material engineers, and pattern masters assisting your product development.'
+      icon: <TrendingUp size={24} />,
+      title: 'Scalable Production',
+      desc: 'Pilot batches starting from a low 200 pairs for startups, scaling seamlessly to 100,000+ units for retail chains.'
     },
     {
-      icon: '🏷️',
-      title: 'Private Label & Branding Solutions',
-      desc: 'Full private label support including hot foil stamping, custom woven tongues, and bespoke rigid shoe boxes.'
+      icon: <Users size={24} />,
+      title: 'Experienced Footwear Team',
+      desc: 'Decades of master Agra lasting craftsmanship combined with specialized footwear CAD designers and materials engineers.'
     },
     {
-      icon: '⏱️',
-      title: 'Transparent Process & Timelines',
-      desc: 'Live WhatsApp factory production updates, sample dispatch in 7 days, and guaranteed shipment dates.'
+      icon: <Truck size={24} />,
+      title: 'Reliable Global Logistics',
+      desc: 'Export-certified palletized packing, complete commercial customs documentation, and dependable pan-India & global freight.'
+    },
+    {
+      icon: <Award size={24} />,
+      title: 'Global Compliance',
+      desc: 'ISO 9001:2015 certified, LWG Gold leather sourcing, SATRA member testing lab, and REACH chemical safety verified.'
+    },
+    {
+      icon: <Layers size={24} />,
+      title: 'Turnkey Private Labeling',
+      desc: 'From custom embossed monograms to branded tissue wrap, luxury rigid gift boxes, and barcoded retail packaging.'
     }
   ];
 
   return (
-    <section className="section" id="why-choose-us" style={{ background: 'var(--black-main)', borderTop: '1px solid var(--black-border)' }}>
-      <div className="container">
-        <div className="section-head text-center" style={{ maxWidth: '800px', margin: '0 auto 48px' }}>
-          <div className="section-label" style={{ justifyContent: 'center' }}>Unmatched Footwear Manufacturing Edge</div>
-          <h2>Why Choose <span className="gold-text">KS Enterprise?</span></h2>
-          <p style={{ fontSize: '1.05rem', color: 'var(--white-70)', lineHeight: '1.8' }}>
-            We don't just manufacture shoes — we help build footwear brands. Our Agra manufacturing plant combines classical artisan heritage with modern scalable lasting.
+    <section className="section" id="why-choose-us" style={{ background: '#FFFFFF', padding: '100px 0', borderBottom: '1px solid rgba(0, 0, 0, 0.05)' }}>
+      <div className="container-lg">
+        
+        {/* Section Header */}
+        <div style={{ textAlign: 'center', maxWidth: '780px', margin: '0 auto 60px' }}>
+          <span style={{
+            fontSize: '0.74rem',
+            fontFamily: 'var(--font-accent)',
+            fontWeight: 800,
+            letterSpacing: '0.15em',
+            color: 'var(--accent-bronze)',
+            textTransform: 'uppercase',
+            display: 'block',
+            marginBottom: '10px'
+          }}>
+            The KS Shoes Advantage
+          </span>
+          <h2 style={{
+            fontSize: 'clamp(2rem, 3.6vw, 3rem)',
+            fontFamily: 'var(--font-accent)',
+            fontWeight: 900,
+            textTransform: 'uppercase',
+            color: '#121212',
+            margin: 0
+          }}>
+            Why Brands Partner With Us
+          </h2>
+          <p style={{ fontSize: '0.96rem', color: 'var(--grey-mid)', marginTop: '12px', lineHeight: 1.65 }}>
+            We provide footwear brands with a reliable, transparent, and technologically advanced manufacturing backbone.
           </p>
         </div>
 
+        {/* 8 Differentiators Grid (4x2) */}
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
           gap: '24px',
-          marginBottom: '44px'
+          marginBottom: '50px'
         }}>
-          {reasons.map((item, idx) => (
+          {differentiators.map((diff, idx) => (
             <div 
               key={idx} 
-              className="card-glass" 
+              className="b2b-card"
               style={{
-                padding: '32px 28px',
                 display: 'flex',
-                gap: '20px',
-                alignItems: 'flex-start',
-                borderRadius: '16px',
-                background: 'var(--black-card)',
-                border: '1px solid var(--black-border)'
+                flexDirection: 'column',
+                gap: '14px'
               }}
             >
               <div style={{
-                fontSize: '2rem',
-                lineHeight: 1,
-                padding: '12px',
-                borderRadius: '12px',
-                background: 'rgba(201, 168, 76, 0.1)',
-                border: '1px solid rgba(201, 168, 76, 0.25)',
-                flexShrink: 0
+                width: '46px',
+                height: '46px',
+                borderRadius: '10px',
+                background: 'rgba(197, 160, 89, 0.1)',
+                border: '1px solid rgba(197, 160, 89, 0.25)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                color: 'var(--gold-light)'
               }}>
-                {item.icon}
+                {diff.icon}
               </div>
-              <div>
-                <h4 style={{ fontSize: '1.15rem', color: 'var(--white)', marginBottom: '8px' }}>
-                  {item.title}
-                </h4>
-                <p style={{ fontSize: '0.88rem', color: 'var(--grey-mid)', lineHeight: '1.7', margin: 0 }}>
-                  {item.desc}
-                </p>
-              </div>
+
+              <h4 style={{
+                fontFamily: 'var(--font-accent)',
+                fontSize: '1.15rem',
+                fontWeight: 800,
+                color: '#121212',
+                textTransform: 'uppercase',
+                margin: 0
+              }}>
+                {diff.title}
+              </h4>
+
+              <p style={{
+                fontSize: '0.86rem',
+                color: 'var(--grey-mid)',
+                lineHeight: 1.6,
+                margin: 0
+              }}>
+                {diff.desc}
+              </p>
             </div>
           ))}
         </div>
 
-        <div style={{
-          textAlign: 'center',
-          background: 'linear-gradient(135deg, rgba(20,16,8,0.9) 0%, rgba(30,24,12,0.9) 100%)',
-          border: '1px solid rgba(201, 168, 76, 0.3)',
-          borderRadius: '16px',
-          padding: '28px 24px',
-          maxWidth: '750px',
-          margin: '0 auto',
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-          flexWrap: 'wrap',
-          gap: '20px'
-        }}>
-          <div style={{ textAlign: 'left' }}>
-            <h4 style={{ fontSize: '1.1rem', color: 'var(--white)', marginBottom: '4px' }}>
-              Ready to Launch Your Footwear Brand?
-            </h4>
-            <p style={{ fontSize: '0.85rem', color: 'var(--grey-mid)', margin: 0 }}>
-              Speak directly with our Agra production team today.
-            </p>
-          </div>
-          <Link to="/contact" className="btn btn-primary" style={{ padding: '12px 28px' }}>
-            Get Started Now →
-          </Link>
-        </div>
       </div>
     </section>
   );

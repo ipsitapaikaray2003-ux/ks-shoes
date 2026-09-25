@@ -154,7 +154,7 @@ export default function ManufacturingVideoShowcase() {
             height: 0,
             overflow: 'hidden',
             borderRadius: '18px',
-            background: '#050505'
+            background: '#FFFFFF'
           }}>
             <iframe
               src={`https://www.youtube-nocookie.com/embed/${activeVideo}?autoplay=0&rel=0&modestbranding=1`}
@@ -207,7 +207,7 @@ export default function ManufacturingVideoShowcase() {
             }}>
               Interactive Manufacturing Journey
             </span>
-            <h3 style={{ fontSize: '1.8rem', color: 'var(--white)', marginTop: '8px' }}>
+            <h3 style={{ fontSize: '1.8rem', color: '#121212', marginTop: '8px' }}>
               4 Master Stages of Shoe Creation
             </h3>
           </div>
@@ -287,7 +287,7 @@ export default function ManufacturingVideoShowcase() {
                 </span>
               </div>
 
-              <h3 style={{ fontSize: '1.85rem', color: 'var(--white)', marginBottom: '18px', lineHeight: 1.25 }}>
+              <h3 style={{ fontSize: '1.85rem', color: '#121212', marginBottom: '18px', lineHeight: 1.25 }}>
                 {steps[activeStep].title}
               </h3>
 
