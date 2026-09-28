@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+﻿import React, { useState, useMemo } from 'react';
 
 export default function RfqCalculator({ selectedCategory, onCategoryChange }) {
   const [category, setCategory] = useState(selectedCategory || 'sneakers');
@@ -53,8 +53,8 @@ export default function RfqCalculator({ selectedCategory, onCategoryChange }) {
     };
 
     const volumeLabels = {
-      '200-500': '200 – 500 Pairs (Startup Pilot)',
-      '500-2000': '500 – 2,000 Pairs (Growing Brand)',
+      '200-500': '200 â€“ 500 Pairs (Startup Pilot)',
+      '500-2000': '500 â€“ 2,000 Pairs (Growing Brand)',
       '2000+': '2,000+ Pairs (Enterprise)'
     };
 
@@ -64,8 +64,8 @@ export default function RfqCalculator({ selectedCategory, onCategoryChange }) {
       bespoke: 'Full Bespoke OEM (Custom Sole Mold & Last)'
     };
 
-    const msg = `Hello KS Enterprise, I would like to get a footwear manufacturing quotation:\n• Category: ${categoryLabels[category] || category}\n• Volume: ${volumeLabels[volume] || volume}\n• Customization: ${customLabels[customization] || customization}\n• Estimated Lead Time: ${calculation.leadTime}\nPlease share your latest catalog and MOQ price matrix.`;
-    const url = `https://wa.me/911234567890?text=${encodeURIComponent(msg)}`;
+    const msg = `Hello KS Enterprise, I would like to get a footwear manufacturing quotation:\nâ€¢ Category: ${categoryLabels[category] || category}\nâ€¢ Volume: ${volumeLabels[volume] || volume}\nâ€¢ Customization: ${customLabels[customization] || customization}\nâ€¢ Estimated Lead Time: ${calculation.leadTime}\nPlease share your latest catalog and MOQ price matrix.`;
+    const url = `https://wa.me/919871906094?text=${encodeURIComponent(msg)}`;
     window.open(url, '_blank');
   };
 
@@ -115,8 +115,8 @@ export default function RfqCalculator({ selectedCategory, onCategoryChange }) {
                     value={volume}
                     onChange={(e) => setVolume(e.target.value)}
                   >
-                    <option value="200-500">200 – 500 Pairs (Startup Pilot Batch — Low MOQ)</option>
-                    <option value="500-2000">500 – 2,000 Pairs (Growing D2C Brand Tier)</option>
+                    <option value="200-500">200 â€“ 500 Pairs (Startup Pilot Batch â€” Low MOQ)</option>
+                    <option value="500-2000">500 â€“ 2,000 Pairs (Growing D2C Brand Tier)</option>
                     <option value="2000+">2,000+ Pairs (Enterprise Retail Chain Tier)</option>
                   </select>
                 </div>

@@ -4,6 +4,8 @@ import HomeAboutSection from '../components/HomeAboutSection';
 import ScrollVideoAnimation from '../components/ScrollVideoAnimation';
 import WhyKSSection from '../components/WhyKSSection';
 import CollectionsSection from '../components/CollectionsSection';
+import HomeProductionCapacity from '../components/HomeProductionCapacity';
+import HomeBrandsSection from '../components/HomeBrandsSection';
 import ProcessTimelineSection from '../components/ProcessTimelineSection';
 import HomeContactSection from '../components/HomeContactSection';
 
@@ -26,6 +28,8 @@ export default function HomePage({ onOpenModal, onShowToast }) {
       />
 
       <ProcessTimelineSection />
+      <HomeProductionCapacity />
+      <HomeBrandsSection />
       <HomeContactSection onShowToast={onShowToast} />
     </div>
   );

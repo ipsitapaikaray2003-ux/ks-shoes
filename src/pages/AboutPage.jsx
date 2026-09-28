@@ -12,7 +12,7 @@ export default function AboutPage() {
         display: 'flex', 
         alignItems: 'center', 
         justifyContent: 'center',
-        backgroundImage: 'linear-gradient(to bottom, rgba(5,5,5,0.3), #050505), url("/assets/images/hero_luxury_artisan.jpg")',
+        backgroundImage: 'linear-gradient(to bottom, rgba(5,5,5,0.3), #050505), url("/assets/images/hightech_factory_cinematic.jpg")',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed'
@@ -46,13 +46,13 @@ export default function AboutPage() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8 }}
           >
-            <h2 style={{ fontSize: '3rem', fontWeight: 700, marginBottom: '24px', letterSpacing: '-0.02em', color: '#ffffff' }}>Crafting Excellence <br/>Since Day One</h2>
+            <h2 style={{ fontSize: '3rem', fontWeight: 700, marginBottom: '24px', letterSpacing: '-0.02em', color: '#ffffff' }}>About Company</h2>
             <div style={{ width: '60px', height: '4px', background: 'var(--gold-primary)', marginBottom: '32px' }}></div>
             <p style={{ fontSize: '1.15rem', color: '#aaa', lineHeight: 1.8, marginBottom: '24px' }}>
-              Born in Agra, the historic heart of Indian leather craftsmanship, KS Shoes began with a simple mission: to build footwear that commands respect. For decades, we have honed our techniques, working closely with master artisans who have passed their skills down through generations.
+              <strong>KS Enterprises</strong> is a trusted footwear manufacturing company established on 1 October 2025, specializing in the production of high-quality sports shoes. Since our inception, we have focused on delivering durable, stylish, and comfortable footwear that meets the evolving demands of the Indian footwear market.
             </p>
             <p style={{ fontSize: '1.15rem', color: '#aaa', lineHeight: 1.8 }}>
-              Today, our heritage is our strongest asset. Every cut, every stitch, and every lasting process is a testament to our unyielding commitment to quality. We don't just manufacture shoes; we engineer confidence.
+              With modern manufacturing practices, skilled craftsmanship, and a commitment to quality, KS Enterprises has built a reputation as a reliable manufacturing partner for leading footwear brands and private-label businesses.
             </p>
           </motion.div>
           
@@ -64,7 +64,7 @@ export default function AboutPage() {
             transition={{ duration: 0.8 }}
           >
             <div style={{ position: 'absolute', top: '-20px', left: '-20px', width: '100%', height: '100%', border: '1px solid var(--gold-primary)', borderRadius: '16px', zIndex: 0 }}></div>
-            <img src="/assets/images/craft_stitching.jpg" alt="Artisan stitching" style={{ width: '100%', borderRadius: '16px', position: 'relative', zIndex: 1, boxShadow: '0 20px 40px rgba(0,0,0,0.5)', filter: 'contrast(1.1) grayscale(20%)' }} />
+            <img src="/assets/images/modern_shoe_factory.jpg" alt="KS Enterprises Modern Factory" style={{ width: '100%', borderRadius: '16px', position: 'relative', zIndex: 1, boxShadow: '0 20px 40px rgba(0,0,0,0.5)', filter: 'contrast(1.1)' }} />
           </motion.div>
         </div>
       </section>
@@ -108,41 +108,69 @@ export default function AboutPage() {
       </section>
 
       {/* Leadership Section */}
-      <section style={{ padding: '140px 5%', maxWidth: '1000px', margin: '0 auto', textAlign: 'center' }}>
+      <section style={{ padding: '140px 5%', maxWidth: '1200px', margin: '0 auto', textAlign: 'center' }}>
         <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
           <span style={{ color: 'var(--gold-primary)', fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '0.3em', fontWeight: 600, display: 'block', marginBottom: '20px' }}>
-            Leadership
+            Our Team
           </span>
-          <h2 style={{ fontSize: '3.5rem', fontWeight: 800, margin: '0 0 60px 0', letterSpacing: '-0.02em', color: '#ffffff' }}>
-            Visionary Direction
+          <h2 style={{ fontSize: '3.5rem', fontWeight: 800, margin: '0 0 80px 0', letterSpacing: '-0.02em', color: '#ffffff' }}>
+            Visionary Leadership
           </h2>
 
           <div style={{ 
-            background: 'linear-gradient(145deg, #111, #0a0a0a)', 
-            padding: '60px 40px', 
-            borderRadius: '24px',
-            border: '1px solid rgba(214,180,90,0.15)',
-            boxShadow: '0 30px 60px rgba(0,0,0,0.4)',
-            position: 'relative'
+            display: 'grid', 
+            gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', 
+            gap: '20px',
+            alignItems: 'stretch'
           }}>
-            {/* Elegant Quote Icon */}
-            <div style={{ position: 'absolute', top: '-30px', left: '50%', transform: 'translateX(-50%)', background: '#050505', padding: '10px 20px', borderRadius: '50px', border: '1px solid rgba(214,180,90,0.3)' }}>
-              <span style={{ fontSize: '2rem', color: 'var(--gold-primary)', lineHeight: 1 }}>❝</span>
-            </div>
-
-            <p style={{ fontSize: '1.4rem', color: '#fff', fontStyle: 'italic', lineHeight: 1.8, marginBottom: '40px', fontWeight: 300 }}>
-              "Our vision has always been to bridge the gap between traditional Indian craftsmanship and global manufacturing standards. By providing scalable, robust solutions alongside massive bulk capacity, we empower modern D2C brands to build the true future of global footwear."
-            </p>
-            
-            <div>
-              <h3 style={{ fontSize: '1.5rem', fontWeight: 700, color: 'var(--gold-primary)', margin: '0 0 5px 0' }}>Abhishek Singhal</h3>
-              <p style={{ color: '#888', textTransform: 'uppercase', letterSpacing: '0.1em', fontSize: '0.85rem', margin: 0 }}>Founder & Managing Director</p>
-            </div>
+            {[
+              { name: 'Himanshu Tyagi', role: 'Founder' },
+              { name: 'Nishant Kumar', role: 'Development Head' },
+              { name: 'Neha Upadhayay', role: 'Merchandising & Sourcing' },
+              { name: 'Sarad Gurung', role: 'Production Manager' }
+            ].map((member, idx) => (
+              <motion.div 
+                key={idx}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: idx * 0.1 }}
+                style={{
+                  background: 'linear-gradient(145deg, #111, #0a0a0a)',
+                  padding: '40px 30px',
+                  borderRadius: '24px',
+                  border: '1px solid rgba(214,180,90,0.15)',
+                  boxShadow: '0 20px 40px rgba(0,0,0,0.3)',
+                  transition: 'transform 0.3s ease, border-color 0.3s ease',
+                  cursor: 'default'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-10px)';
+                  e.currentTarget.style.borderColor = 'rgba(214,180,90,0.5)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.borderColor = 'rgba(214,180,90,0.15)';
+                }}
+              >
+                <div style={{ width: '80px', height: '80px', margin: '0 auto 24px', borderRadius: '50%', background: 'rgba(214,180,90,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <span style={{ fontSize: '2.5rem', color: 'var(--gold-primary)', fontWeight: 800 }}>
+                    {member.name.charAt(0)}
+                  </span>
+                </div>
+                <h3 style={{ fontSize: '1.6rem', fontWeight: 700, color: '#ffffff', margin: '0 0 10px 0', letterSpacing: '-0.01em' }}>
+                  {member.name}
+                </h3>
+                <p style={{ color: 'var(--gold-primary)', textTransform: 'uppercase', letterSpacing: '0.08em', fontSize: '0.8rem', margin: 0, fontWeight: 700 }}>
+                  {member.role}
+                </p>
+              </motion.div>
+            ))}
           </div>
         </motion.div>
       </section>

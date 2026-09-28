@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 
 export default function BrandJourney() {
   const [activeStep, setActiveStep] = useState(0);
@@ -16,7 +16,7 @@ export default function BrandJourney() {
         'Competitive Category Footwear Analysis',
         'Initial Feasibility & Cost Estimation'
       ],
-      turnaround: '1–2 Days',
+      turnaround: '1â€“2 Days',
       badge: 'Strategy Phase'
     },
     {
@@ -31,7 +31,7 @@ export default function BrandJourney() {
         'Colorway Selection & Pantone Color Matching',
         'Anatomical 3D Last Profiling (UK/US/EU)'
       ],
-      turnaround: '3–5 Days',
+      turnaround: '3â€“5 Days',
       badge: 'Design & CAD'
     },
     {
@@ -61,7 +61,7 @@ export default function BrandJourney() {
         'Upper & Insole Fit Evaluation',
         'Refinement & Final Pre-Production Approval'
       ],
-      turnaround: '5–7 Working Days',
+      turnaround: '5â€“7 Working Days',
       badge: 'Zero-Risk Sampling'
     },
     {
@@ -74,9 +74,9 @@ export default function BrandJourney() {
         '100% In-House Scalable Manufacturing',
         'Continuous Inline Quality Inspection',
         'Martindale Abrasion & 50,000 Flex Cycle Testing',
-        'Flexible Low MOQ for Startups (200–300 pairs)'
+        'Flexible Low MOQ for Startups (200â€“300 pairs)'
       ],
-      turnaround: '18–28 Days',
+      turnaround: '18â€“28 Days',
       badge: 'Precision Lasting'
     },
     {
@@ -104,7 +104,7 @@ export default function BrandJourney() {
         <div className="section-head">
           <div className="section-label" style={{ justifyContent: 'center' }}>End-to-End D2C &amp; OEM Workflow</div>
           <h2>From Idea To Launch: <span className="gold-text">The 6-Stage Journey</span></h2>
-          <p>We don't just manufacture shoes — we help entrepreneurs, D2C startups, and retail chains build iconic footwear brands from scratch.</p>
+          <p>We don't just manufacture shoes â€” we help entrepreneurs, D2C startups, and retail chains build iconic footwear brands from scratch.</p>
         </div>
 
         {/* Step Navigation Tabs with Progress Line */}
@@ -155,8 +155,8 @@ export default function BrandJourney() {
           <div className="grid-2" style={{ alignItems: 'center', gap: '40px' }}>
             <div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px' }}>
-                <span className="tag" style={{ color: 'var(--gold-light)' }}>Phase {current.num} • {current.badge}</span>
-                <span style={{ fontSize: '0.8rem', color: 'var(--grey-mid)' }}>⏱ {current.turnaround}</span>
+                <span className="tag" style={{ color: 'var(--gold-light)' }}>Phase {current.num} â€¢ {current.badge}</span>
+                <span style={{ fontSize: '0.8rem', color: 'var(--grey-mid)' }}>â± {current.turnaround}</span>
               </div>
 
               <h3 style={{ fontSize: '1.6rem', marginBottom: '8px', color: '#121212' }}>
@@ -201,7 +201,7 @@ export default function BrandJourney() {
                   Start Phase {current.num} with Us
                 </a>
                 <a 
-                  href="https://wa.me/911234567890?text=Hello%20KS%20Enterprise%2C%20I%20would%20like%20to%20consult%20on%20building%20my%20footwear%20brand." 
+                  href="https://wa.me/919871906094?text=Hi%20KS%20Enterprises,%20I%20have%20an%20inquiry" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="btn btn-outline btn-sm"
@@ -219,7 +219,7 @@ export default function BrandJourney() {
               <ul style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
                 {current.deliverables.map((item, idx) => (
                   <li key={idx} style={{ display: 'flex', alignItems: 'flex-start', gap: '12px', fontSize: '0.9rem', color: 'var(--white-90)' }}>
-                    <span style={{ color: 'var(--gold-primary)', fontSize: '1.1rem', lineHeight: '1' }}>✓</span>
+                    <span style={{ color: 'var(--gold-primary)', fontSize: '1.1rem', lineHeight: '1' }}>âœ“</span>
                     <span>{item}</span>
                   </li>
                 ))}

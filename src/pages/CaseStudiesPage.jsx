@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default function CaseStudiesPage() {
@@ -22,7 +22,7 @@ export default function CaseStudiesPage() {
       title: 'Global Export Success: Scaling Italian Blake Loafers to London & Dubai',
       client: 'Aurelius Footwear (UK & GCC Luxury Label)',
       timeline: '24 Months Continuous Supply',
-      challenge: 'Aurelius required museum-grade hand-burnished calfskin loafers with Blake stitched leather soles and custom debossed brass crests. European factories were quoting €95/pair with 90-day lead times.',
+      challenge: 'Aurelius required museum-grade hand-burnished calfskin loafers with Blake stitched leather soles and custom debossed brass crests. European factories were quoting â‚¬95/pair with 90-day lead times.',
       solution: 'KS Enterprise formulated an export-grade supply line using French crust calfskin, hand-applied antique patina by master Agra artisans, and rigid magnetic slide-out boxes with velvet dust bags at a 55% lower production cost.',
       metrics: [
         { label: 'Export Volume to Date', value: '28,000 Pairs' },
@@ -72,7 +72,7 @@ export default function CaseStudiesPage() {
               <div key={idx} className="card-interactive-luxury" style={{ padding: 'clamp(32px, 5vw, 48px)', background: 'var(--grad-card)' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px', marginBottom: '16px' }}>
                   <span className="tag" style={{ color: 'var(--gold-light)' }}>{cs.badge}</span>
-                  <span style={{ fontSize: '0.85rem', color: 'var(--grey-mid)' }}>⏱ {cs.timeline}</span>
+                  <span style={{ fontSize: '0.85rem', color: 'var(--grey-mid)' }}>â± {cs.timeline}</span>
                 </div>
 
                 <h2 style={{ fontSize: 'clamp(1.5rem, 2.5vw, 2rem)', marginBottom: '8px' }}>{cs.title}</h2>
@@ -135,7 +135,7 @@ export default function CaseStudiesPage() {
                 Start Brand Consultation
               </Link>
               <a 
-                href="https://wa.me/911234567890?text=Hello%20KS%20Enterprise%2C%20I%20would%20like%20to%20discuss%20a%20footwear%20case%20study%20project." 
+                href="https://wa.me/919871906094?text=Hi%20KS%20Enterprises,%20I%20have%20an%20inquiry" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="btn btn-outline btn-lg"

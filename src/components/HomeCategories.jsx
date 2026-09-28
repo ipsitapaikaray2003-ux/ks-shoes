@@ -7,19 +7,19 @@ const categories = [
   {
     title: "Men's Footwear",
     tagline: "Custom sneakers, formal, and casual.",
-    image: "/assets/images/mens_collection.jpg",
+    image: "/assets/images/product_13.png",
     link: "/products"
   },
   {
     title: "Women's Footwear",
     tagline: "High-end retail & lifestyle designs.",
-    image: "/assets/images/womens_collection.jpg",
+    image: "/assets/images/product_14.png",
     link: "/products"
   },
   {
     title: "Corporate & Industrial",
     tagline: "Bespoke gifting & safety shoes.",
-    image: "/assets/images/corporate_gifting.jpg",
+    image: "/assets/images/product_15.png",
     link: "/products"
   }
 ];
@@ -78,7 +78,12 @@ export default function HomeCategories() {
                   overflow: 'hidden',
                   borderRadius: '16px',
                   height: '450px',
-                  marginBottom: '24px'
+                  marginBottom: '24px',
+                  backgroundColor: '#ffffff',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  border: '1px solid rgba(0,0,0,0.05)'
                 }}>
                   <img 
                     src={cat.image} 
@@ -86,7 +91,8 @@ export default function HomeCategories() {
                     style={{
                       width: '100%',
                       height: '100%',
-                      objectFit: 'cover',
+                      objectFit: 'contain',
+                      padding: '30px',
                       transition: 'transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94)'
                     }}
                     className="category-img"

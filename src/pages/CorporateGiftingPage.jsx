@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 export default function CorporateGiftingPage({ onShowToast }) {
@@ -108,19 +108,19 @@ export default function CorporateGiftingPage({ onShowToast }) {
 
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', marginBottom: '36px' }}>
                 <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
-                  <span style={{ color: 'var(--gold-primary)', fontSize: '1.2rem' }}>★</span>
+                  <span style={{ color: 'var(--gold-primary)', fontSize: '1.2rem' }}>â˜…</span>
                   <span style={{ fontSize: '0.88rem', color: 'var(--white-90)' }}>100% Genuine Full-Grain Leather</span>
                 </div>
                 <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
-                  <span style={{ color: 'var(--gold-primary)', fontSize: '1.2rem' }}>★</span>
+                  <span style={{ color: 'var(--gold-primary)', fontSize: '1.2rem' }}>â˜…</span>
                   <span style={{ fontSize: '0.88rem', color: 'var(--white-90)' }}>Custom Debossed Corporate Crests</span>
                 </div>
                 <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
-                  <span style={{ color: 'var(--gold-primary)', fontSize: '1.2rem' }}>★</span>
+                  <span style={{ color: 'var(--gold-primary)', fontSize: '1.2rem' }}>â˜…</span>
                   <span style={{ fontSize: '0.88rem', color: 'var(--white-90)' }}>Cedar Shoe Trees Included</span>
                 </div>
                 <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
-                  <span style={{ color: 'var(--gold-primary)', fontSize: '1.2rem' }}>★</span>
+                  <span style={{ color: 'var(--gold-primary)', fontSize: '1.2rem' }}>â˜…</span>
                   <span style={{ fontSize: '0.88rem', color: 'var(--white-90)' }}>Multi-Location Pan-India Delivery</span>
                 </div>
               </div>
@@ -137,7 +137,7 @@ export default function CorporateGiftingPage({ onShowToast }) {
                   Request Proposal
                 </a>
                 <a 
-                  href="https://wa.me/911234567890?text=Hello%20KS%20Enterprise%2C%20I%20would%20like%20to%20inquire%20about%20corporate%20footwear%20gifting%20suites." 
+                  href="https://wa.me/919871906094?text=Hi%20KS%20Enterprises,%20I%20have%20an%20inquiry" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="btn btn-outline btn-sm"
@@ -196,13 +196,13 @@ export default function CorporateGiftingPage({ onShowToast }) {
                   {tier.title}
                 </h3>
                 <div style={{ fontSize: '0.8rem', color: 'var(--gold-light)', marginBottom: '20px', fontWeight: 600 }}>
-                  ⚡ {tier.discount}
+                  âš¡ {tier.discount}
                 </div>
 
                 <ul style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '28px' }}>
                   {tier.includes.map((inc, iIdx) => (
                     <li key={iIdx} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', fontSize: '0.85rem', color: '#555555' }}>
-                      <span style={{ color: 'var(--gold-primary)' }}>✓</span>
+                      <span style={{ color: 'var(--gold-primary)' }}>âœ“</span>
                       <span>{inc}</span>
                     </li>
                   ))}
@@ -281,7 +281,7 @@ export default function CorporateGiftingPage({ onShowToast }) {
                   <input 
                     type="tel" 
                     className="form-input" 
-                    placeholder="+91 12345 67890" 
+                    placeholder="+91 98719 06094" 
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     required 
@@ -297,9 +297,9 @@ export default function CorporateGiftingPage({ onShowToast }) {
                     value={formData.quantity}
                     onChange={(e) => setFormData({ ...formData, quantity: e.target.value })}
                   >
-                    <option value="150">150 – 250 Sets (Leadership / VIP Summit)</option>
-                    <option value="250">250 – 500 Sets (Annual Conference)</option>
-                    <option value="500">500 – 1,000+ Sets (Enterprise Milestone)</option>
+                    <option value="150">150 â€“ 250 Sets (Leadership / VIP Summit)</option>
+                    <option value="250">250 â€“ 500 Sets (Annual Conference)</option>
+                    <option value="500">500 â€“ 1,000+ Sets (Enterprise Milestone)</option>
                   </select>
                 </div>
                 <div className="form-group">

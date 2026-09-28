@@ -22,7 +22,7 @@ export default function CinematicCommercialPlayer({ isOpen, onClose }) {
         stage: '01 / REVEAL',
         title: 'Emergence From Darkness',
         desc: 'Single luxury sneaker appearing in minimal off-white studio with soft key lighting',
-        image: '/assets/images/cinematic_3d_sneaker_hero.jpg',
+        image: '/assets/images/product_11.png',
         transform: `scale(${0.85 + (t / 2.5) * 0.15}) translateY(${(2.5 - t) * 15}px)`,
         opacity: Math.min(1, t / 1.5),
         filter: 'brightness(' + (0.4 + (t / 2.5) * 0.6) + ') contrast(1.1)'
@@ -33,7 +33,7 @@ export default function CinematicCommercialPlayer({ isOpen, onClose }) {
         stage: '02 / 360° ORBIT',
         title: 'Axial Rotation & Camera Push-In',
         desc: 'Continuous 360-degree inspection revealing silhouette, upper calfskin and heel curvature',
-        image: '/assets/images/cinematic_3d_sneaker_hero.jpg',
+        image: '/assets/images/product_11.png',
         transform: `scale(${1 + p * 0.12}) rotateY(${p * 360}deg) translateY(${Math.sin(p * Math.PI * 2) * 8}px)`,
         opacity: 1,
         filter: 'brightness(1) contrast(1.08)'
@@ -44,7 +44,7 @@ export default function CinematicCommercialPlayer({ isOpen, onClose }) {
         stage: '03 / MACRO CLOSE-UP',
         title: 'Precision Stitching & Leather Texture',
         desc: 'Extreme macro zoom on full-grain calfskin, double lockstitching and perforated matrix',
-        image: '/assets/images/cinematic_3d_sneaker_macro.jpg',
+        image: '/assets/images/product_11.png',
         transform: `scale(${1.08 + p * 0.08}) translateX(${-p * 20}px)`,
         opacity: 1,
         filter: 'brightness(1.02) contrast(1.12)'
@@ -55,7 +55,7 @@ export default function CinematicCommercialPlayer({ isOpen, onClose }) {
         stage: '04 / EXPLODED ANATOMY',
         title: 'Vertical Component Separation',
         desc: 'Upper → Lining → Insole → Midsole → Outsole separating in mid-air alignment',
-        image: '/assets/images/cinematic_3d_sneaker_exploded.jpg',
+        image: '/assets/images/product_11.png',
         transform: `scale(${0.96 + p * 0.06}) translateY(${Math.sin(p * Math.PI) * -10}px)`,
         opacity: 1,
         filter: 'brightness(1) contrast(1.05)'
@@ -66,7 +66,7 @@ export default function CinematicCommercialPlayer({ isOpen, onClose }) {
         stage: '05 / REASSEMBLY',
         title: 'Hermetic Assembly & Final Pose',
         desc: 'Components smoothly snap back into the finished sneaker with subtle specular glint',
-        image: '/assets/images/cinematic_3d_sneaker_hero.jpg',
+        image: '/assets/images/product_11.png',
         transform: `scale(${1 + (1 - p) * 0.05})`,
         opacity: 1,
         filter: 'brightness(1.05) contrast(1.1)'
@@ -218,7 +218,8 @@ export default function CinematicCommercialPlayer({ isOpen, onClose }) {
               style={{
                 width: '100%',
                 height: '100%',
-                objectFit: 'cover',
+                objectFit: 'contain',
+                backgroundColor: '#ffffff',
                 transform: currentPhase.transform,
                 opacity: currentPhase.opacity,
                 filter: currentPhase.filter,

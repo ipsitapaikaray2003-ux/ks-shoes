@@ -28,7 +28,7 @@ export const PRODUCTS = [
     moq: '200 Pairs per colorway',
     sizes: 'UK 5–12 | EU 39–46 | US 6–13',
     leadTime: '3–4 Weeks',
-    image: '/assets/images/sports_running_shoe.jpg',
+    image: '/assets/images/product_1.jpg',
     features: ['360° Mesh Ventilation', 'Dynamic Arch Torsion Plate', 'Shock-Absorbing Heel Counter', 'Custom Brand Hot-Pressing']
   },
   {
@@ -43,7 +43,7 @@ export const PRODUCTS = [
     moq: '200 Pairs per colorway',
     sizes: 'UK 6–12 | EU 40–46 | US 7–13',
     leadTime: '3 Weeks',
-    image: '/assets/images/clean_runner_unbranded.jpg',
+    image: '/assets/images/product_2.jpg',
     features: ['Strobel Flexible Lasting', 'Ortholite Memory Foam Insole', 'Debossed Heel Monogram', 'Waxed Combed Cotton Laces']
   },
   {
@@ -58,7 +58,7 @@ export const PRODUCTS = [
     moq: '200 Pairs per colorway',
     sizes: 'UK 5–12 | EU 39–46 | US 6–13',
     leadTime: '3–4 Weeks',
-    image: '/assets/images/slider_court_sneaker.jpg',
+    image: '/assets/images/product_3.png',
     features: ['Hand-Burnished Patina Accents', 'Laser-Etched Metallic Aglets', 'Anti-Microbial Cowhide Glove Lining', 'Custom Molded Cupsole']
   },
   {
@@ -73,7 +73,7 @@ export const PRODUCTS = [
     moq: '300 Pairs per colorway',
     sizes: 'UK 6–12 | EU 40–46 | US 7–13',
     leadTime: '4 Weeks',
-    image: '/assets/images/slider_running_sneaker.jpg',
+    image: '/assets/images/product_4.png',
     features: ['75% Energy Return Insole', 'Reflective 3M Low-Light Elements', 'Anatomical Anti-Friction Tongue', 'Seamless Welded Eyestays']
   },
   {
@@ -88,7 +88,7 @@ export const PRODUCTS = [
     moq: '300 Pairs per style',
     sizes: 'UK 4–12 | EU 37–46 | US 5–13',
     leadTime: '3–4 Weeks',
-    image: '/assets/images/craft_stitching.jpg',
+    image: '/assets/images/product_5.png',
     features: ['Certified Slip Resistance (SRC Grade)', 'Removable Orthopedic Footbed', 'Fluid-Resistant Sealed Seams', 'Non-Metallic Construction']
   },
   {
@@ -103,7 +103,7 @@ export const PRODUCTS = [
     moq: '500 Pairs per production run',
     sizes: 'UK 5–13 | EU 38–47 | US 6–14',
     leadTime: '4–5 Weeks',
-    image: '/assets/images/factory.jpg',
+    image: '/assets/images/product_6.png',
     features: ['200 Joules Impact Protection', '1100N Anti-Penetration Midsole', '300°C Heat-Resistant Rubber Sole', 'ESD Anti-Static Certified']
   },
   {
@@ -118,7 +118,7 @@ export const PRODUCTS = [
     moq: '200 Pairs per style',
     sizes: 'UK 6–12 | EU 40–46 | US 7–13',
     leadTime: '3–4 Weeks',
-    image: '/assets/images/slider_hightop_sneaker.jpg',
+    image: '/assets/images/product_7.png',
     features: ['High-Abrasion Ollie Protection', 'Heavy Gauge Brass Eyelets', 'Embroidered Ankle Brand Crest', 'Shock-Absorbing PU Cup Insole']
   },
   {
@@ -133,7 +133,7 @@ export const PRODUCTS = [
     moq: 'Custom Tooling Project',
     sizes: 'Full Graded Size Runs Available',
     leadTime: '7 Days Sample / 4 Weeks Production',
-    image: '/assets/images/hero_luxury_artisan.jpg',
+    image: '/assets/images/product_8.png',
     features: ['CAD 3D Footwear Scanning', 'Private Outsole Tooling Ownership', 'Turnkey Luxury Packaging Suites', 'Confidentiality & NDA Protected']
   }
 ];

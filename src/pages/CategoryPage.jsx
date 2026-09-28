@@ -16,34 +16,34 @@ export default function CategoryPage() {
       title: "Custom Men's Shoes Manufacturer",
       description: "MakeMyShoe is a custom men's footwear manufacturer specializing in private label, OEM, and ODM production for D2C brands, retailers, and corporate clients. We don't just make shoes — we build your brand.",
       items: [
-        { id: "01", title: "Men's Sneakers", desc: "Private label sneaker manufacturing — low-top, high-top, chunky, and leather sneakers custom-built for your brand.", img: "/assets/images/ks_men_runner_sneaker.jpg" },
-        { id: "02", title: "Men's Casual Shoes", desc: "Custom casual shoe manufacturing for retail and D2C — lace-ups, slip-ons, moccasins, and driving shoes.", img: "/assets/images/ks_casual_shoe.jpg" },
-        { id: "03", title: "Men's Loafers", desc: "Premium custom loafer manufacturer — penny, tassel, bit, and driving loafers in genuine leather and suede.", img: "/assets/images/ks_loafer_shoe.jpg" },
-        { id: "04", title: "Men's Formal Shoes", desc: "Custom formal shoe manufacturer — Oxfords, Derbys, Brogues, and Wholecuts in premium leather.", img: "/assets/images/slider_oxford.jpg" }
+        { id: "01", title: "Men's Sneakers", desc: "Private label sneaker manufacturing — low-top, high-top, chunky, and leather sneakers custom-built for your brand.", img: "/assets/images/product_1.jpg" },
+        { id: "02", title: "Men's Casual Shoes", desc: "Custom casual shoe manufacturing for retail and D2C — lace-ups, slip-ons, moccasins, and driving shoes.", img: "/assets/images/product_3.png" },
+        { id: "03", title: "Men's Loafers", desc: "Premium custom loafer manufacturer — penny, tassel, bit, and driving loafers in genuine leather and suede.", img: "/assets/images/product_5.png" },
+        { id: "04", title: "Men's Formal Shoes", desc: "Custom formal shoe manufacturer — Oxfords, Derbys, Brogues, and Wholecuts in premium leather.", img: "/assets/images/product_7.png" }
       ]
     },
     women: {
       title: "Custom Women's Footwear",
       description: "Premium custom women's footwear manufacturing. We specialize in heels, flats, sneakers, and boots for private label D2C brands and boutiques.",
       items: [
-        { id: "01", title: "Women's Sneakers", desc: "Chunky, lifestyle, and athletic sneakers customized for female demographics.", img: "/assets/images/ks_women_footwear.jpg" },
-        { id: "02", title: "Women's Flats & Sandals", desc: "Elegant, comfortable, and trendy flats designed for retail collections.", img: "/assets/images/ks_womens_sandals.jpg" }
+        { id: "01", title: "Women's Sneakers", desc: "Chunky, lifestyle, and athletic sneakers customized for female demographics.", img: "/assets/images/product_2.jpg" },
+        { id: "02", title: "Women's Flats & Sandals", desc: "Elegant, comfortable, and trendy flats designed for retail collections.", img: "/assets/images/product_4.png" }
       ]
     },
     kids: {
       title: "Custom Kids Footwear",
       description: "Safe, durable, and stylish kids' footwear manufacturing. We ensure high-quality materials for comfortable toddler and youth shoes.",
       items: [
-        { id: "01", title: "Kids' Sneakers & Velcro Shoes", desc: "Easy-to-wear, comfortable sneakers designed for active kids.", img: "/assets/images/ks_kids_footwear.jpg" },
-        { id: "02", title: "School Shoes", desc: "Durable uniform footwear manufacturing in bulk.", img: "/assets/images/ks_school_shoes.jpg" }
+        { id: "01", title: "Kids' Sneakers & Velcro Shoes", desc: "Easy-to-wear, comfortable sneakers designed for active kids.", img: "/assets/images/product_6.png" },
+        { id: "02", title: "School Shoes", desc: "Durable uniform footwear manufacturing in bulk.", img: "/assets/images/product_8.png" }
       ]
     },
     corporate: {
       title: "Corporate & Industrial Footwear",
       description: "High-quality corporate gifting shoes and heavy-duty industrial safety footwear manufactured to exact safety specifications.",
       items: [
-        { id: "01", title: "Executive Corporate Gifting", desc: "Premium leather formal shoes customized with corporate branding.", img: "/assets/images/ks_corporate_shoe.jpg" },
-        { id: "02", title: "Industrial Safety Boots", desc: "Steel-toe, anti-slip, and durable safety boots for manufacturing plants.", img: "/assets/images/ks_clean_safety_boot.jpg" }
+        { id: "01", title: "Executive Corporate Gifting", desc: "Premium leather formal shoes customized with corporate branding.", img: "/assets/images/product_9.png" },
+        { id: "02", title: "Industrial Safety Boots", desc: "Steel-toe, anti-slip, and durable safety boots for manufacturing plants.", img: "/assets/images/product_10.png" }
       ]
     }
   };
@@ -207,15 +207,13 @@ export default function CategoryPage() {
                 border: '1px solid rgba(214,180,90,0.2)',
                 boxShadow: '0 30px 60px rgba(0,0,0,0.5)',
                 position: 'relative',
-                background: '#000'
+                background: '#ffffff'
               }}>
                 <img 
                   src={item.img} 
                   alt={item.title}
-                  style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.9, filter: 'contrast(1.1)' }}
+                  style={{ width: '100%', height: '100%', objectFit: 'contain', padding: '30px' }}
                 />
-                {/* Internal gradient overlay for blending */}
-                <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, background: 'linear-gradient(to top, rgba(5,5,5,0.8), transparent 50%)' }}></div>
               </div>
             </motion.div>
 

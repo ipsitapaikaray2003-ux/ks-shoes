@@ -58,7 +58,7 @@ export default function ScrollVideoAnimation() {
       {/* Automated Background Video */}
       <video 
         ref={videoRef}
-        src="/3D_shoe_product_showcase_1080p_20260923145121_gwr_video_mvp.mp4"
+        src="/final_shoes.mp4"
         autoPlay 
         loop 
         muted 
@@ -104,12 +104,9 @@ export default function ScrollVideoAnimation() {
         pointerEvents: 'none'
       }}>
         <div style={{ pointerEvents: 'auto', maxWidth: '600px', display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
-          <h2 style={{ fontSize: 'clamp(36px, 5vw, 64px)', color: '#fff', margin: 0, fontWeight: 500, lineHeight: 1, letterSpacing: '-0.02em', textShadow: '0 4px 24px rgba(0,0,0,0.6)' }}>
-            THE FUTURE OF FOOTWEAR
+          <h2 style={{ fontSize: 'clamp(36px, 5vw, 64px)', color: '#fff', margin: 0, fontWeight: 500, lineHeight: 1.1, letterSpacing: '-0.02em', textShadow: '0 4px 24px rgba(0,0,0,0.6)' }}>
+            PREMIUM FOOTWEAR COLLECTION
           </h2>
-          <p style={{ color: 'rgba(255,255,255,0.9)', fontSize: '1.15rem', marginTop: '16px', lineHeight: 1.5, textShadow: '0 2px 10px rgba(0,0,0,0.6)' }}>
-            Experience unparalleled comfort and cutting-edge 3D craftsmanship. Designed to adapt. Built to last.
-          </p>
           <a href="#products" style={{
             display: 'inline-flex',
             marginTop: '28px',

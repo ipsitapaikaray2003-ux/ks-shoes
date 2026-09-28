@@ -6,28 +6,28 @@ export default function BrowseCustomShoes() {
     {
       title: "Men's Sneakers & Sports Shoes",
       badge: "Men's Line",
-      image: "/assets/images/mens_collection.jpg",
+      image: "/assets/images/product_11.png",
       link: "/products?cat=mens",
       desc: "Retro Court Sneakers, Lightweight Running Shoes, Minimalist Low-Tops, and High-Performance Sports Trainers for Men."
     },
     {
       title: "Women's Sneakers & Sports Shoes",
       badge: "Women's Line",
-      image: "/assets/images/womens_collection.jpg",
+      image: "/assets/images/product_12.png",
       link: "/products?cat=womens",
       desc: "Chic Pastel Cupsoles, Aerodynamic Sports Joggers, Fashion Athleisure Sneakers, and Cushion Trainers for Women."
     },
     {
       title: "Kids' Sneakers & Sports Shoes",
       badge: "Kids & Youth",
-      image: "/assets/images/kids_collection.jpg",
+      image: "/assets/images/product_13.png",
       link: "/products?cat=kids",
       desc: "Ultra-Lightweight Playground Running Shoes, Durable Velcro Straps, Non-Marking Soles, and Youth Trainers."
     },
     {
       title: "Corporate & VIP Gifting",
       badge: "Corporate Suites",
-      image: "/assets/images/corporate_gifting.jpg",
+      image: "/assets/images/product_14.png",
       link: "/corporate-gifting",
       desc: "Custom Debossed Executive Sneakers, Rigid Gold Foil Presentation Boxes, and Milestone Gifting Packages."
     }

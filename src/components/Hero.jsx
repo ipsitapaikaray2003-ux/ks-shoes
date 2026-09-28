@@ -1,95 +1,14 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { motion, useScroll, useTransform, useMotionValueEvent } from 'framer-motion';
+import React, { useRef } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
-const FRAME_COUNT = 300;
-
 export default function Hero() {
-  const canvasRef = useRef(null);
   const containerRef = useRef(null);
-  const [images, setImages] = useState([]);
 
   // Framer Motion scroll tracking
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start start", "end end"]
-  });
-
-  // Preload images
-  useEffect(() => {
-    const loadedImages = [];
-    let loadedCount = 0;
-    
-    for (let i = 1; i <= FRAME_COUNT; i++) {
-      const img = new Image();
-      const frameNum = i.toString().padStart(3, '0');
-      img.src = `/frames/ezgif-frame-${frameNum}.jpg`;
-      img.onload = () => {
-        loadedCount++;
-        // Draw first frame when it loads if it's the first one
-        if (i === 1) {
-          drawFrame(0, [img]); 
-        }
-      };
-      loadedImages.push(img);
-    }
-    setImages(loadedImages);
-  }, []);
-
-  const drawFrame = (index, imgArray = images) => {
-    const canvas = canvasRef.current;
-    if (!canvas || !imgArray[index] || !imgArray[index].complete || imgArray[index].naturalWidth === 0) return;
-    
-    const context = canvas.getContext('2d');
-    const img = imgArray[index];
-    const canvasRatio = canvas.width / canvas.height;
-    const imgRatio = img.width / img.height;
-    
-    let drawWidth, drawHeight, offsetX, offsetY;
-
-    if (canvasRatio > imgRatio) {
-       drawWidth = canvas.width;
-       drawHeight = canvas.width / imgRatio;
-       offsetX = 0;
-       offsetY = (canvas.height - drawHeight) / 2;
-    } else {
-       drawHeight = canvas.height;
-       drawWidth = canvas.height * imgRatio;
-       offsetX = (canvas.width - drawWidth) / 2;
-       offsetY = 0;
-    }
-    
-    context.clearRect(0, 0, canvas.width, canvas.height);
-    context.drawImage(img, offsetX, offsetY, drawWidth, drawHeight);
-  };
-
-  // Resize canvas handler
-  useEffect(() => {
-    const resizeCanvas = () => {
-      if (canvasRef.current) {
-        canvasRef.current.width = window.innerWidth;
-        canvasRef.current.height = window.innerHeight;
-        // Redraw current frame
-        const currentProgress = scrollYProgress.get();
-        const frameIndex = Math.min(FRAME_COUNT - 1, Math.floor(currentProgress * FRAME_COUNT));
-        drawFrame(frameIndex);
-      }
-    };
-
-    window.addEventListener('resize', resizeCanvas);
-    resizeCanvas();
-
-    return () => window.removeEventListener('resize', resizeCanvas);
-  }, [images, scrollYProgress]);
-
-  // Update canvas on scroll
-  useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    if (images.length === 0) return;
-    const frameIndex = Math.min(
-      FRAME_COUNT - 1,
-      Math.floor(latest * FRAME_COUNT)
-    );
-    drawFrame(frameIndex);
   });
 
   // TEXT ANIMATIONS BASED ON SCROLL PROGRESS
@@ -128,9 +47,13 @@ export default function Hero() {
         display: 'flex',
         alignItems: 'center'
       }}>
-        {/* Canvas Background */}
-        <canvas 
-          ref={canvasRef} 
+        {/* Video Background */}
+        <video 
+          src="/hero_sneaker_transform.mp4"
+          autoPlay 
+          loop 
+          muted
+          playsInline
           style={{ 
             position: 'absolute',
             top: 0,
@@ -138,6 +61,8 @@ export default function Hero() {
             width: '100%',
             height: '100%',
             objectFit: 'cover',
+            objectPosition: '80% center', // Shifts focus point to the right natively without heavy transform
+            transform: 'scale(1.05) translateX(2%)', // Smaller scale to reduce shoe size
             zIndex: 1
           }} 
         />
@@ -167,7 +92,7 @@ export default function Hero() {
             style={{ 
               position: 'absolute',
               top: '30%',
-              left: '10%',
+              left: '2%',
               maxWidth: '500px',
               opacity: opacity1,
               y: y1,
@@ -267,7 +192,7 @@ export default function Hero() {
             style={{ 
               position: 'absolute',
               top: '30%',
-              left: '10%',
+              left: '2%',
               maxWidth: '500px',
               opacity: opacity3,
               y: y3

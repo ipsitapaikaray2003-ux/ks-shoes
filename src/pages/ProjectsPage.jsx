@@ -12,7 +12,7 @@ export default function ProjectsPage() {
       category: 'running',
       categoryName: 'Performance Running Shoe',
       client: 'Veloce Footwear (London, UK)',
-      image: '/assets/images/slider_running_sneaker.jpg',
+      image: '/assets/images/product_11.png',
       requirement: 'A high-rebound athletic running shoe with breathable jacquard knit and dual-density EVA sole, requiring a rapid prototype to launch within 60 days at a low initial MOQ of 300 pairs.',
       solution: 'Engineered custom seamless knit uppers with reinforced TPU lace cages and utilized our pre-tooled high-rebound EVA sole molds to slash tooling costs and turnaround time.',
       result: 'Initial 300-pair pilot batch delivered in 4 weeks with a 0% return rate. Veloce scaled to 18,000 pairs over the subsequent 12 months with continuous delivery schedules.',
@@ -28,7 +28,7 @@ export default function ProjectsPage() {
       category: 'sneakers',
       categoryName: 'Luxury Court Sneaker',
       client: 'Aurelius Atelier (Milan, Italy)',
-      image: '/assets/images/slider_court_sneaker.jpg',
+      image: '/assets/images/product_12.png',
       requirement: 'A bespoke luxury court sneaker crafted from full-grain Italian calfskin with 360° sidewall stitched rubber soles, embossed brand monogram, and custom rigid box presentation.',
       solution: 'Sourced LWG Gold calfskin from certified tanneries, precision CNC clicking for flawless edge contours, and implemented our proprietary hand-burnishing process for rich patina depth.',
       result: 'Consistently delivers 2,500 pairs per quarterly release across 14 high-end European retail stockists, meeting European REACH chemical standards.',
@@ -44,7 +44,7 @@ export default function ProjectsPage() {
       category: 'safety',
       categoryName: 'Work & Safety Footwear',
       client: 'Titan Industrial Supplies (Munich, Germany)',
-      image: '/assets/images/factory.jpg',
+      image: '/assets/images/product_13.png',
       requirement: 'Heavy-duty industrial safety shoe with EN ISO 20345 compliance, lightweight composite toe protection, oil/slip-resistant outsole, and electric shock resistance for airport ground crews.',
       solution: 'Integrated 200J fiberglass composite safety caps, Kevlar puncture-resistant midplates, and dual-density oil-resistant PU/rubber injection soles.',
       result: 'Certified in German laboratories on the first submission. Successfully fulfilled recurring bulk orders of 15,000 pairs annually across European logistics hubs.',
@@ -60,7 +60,7 @@ export default function ProjectsPage() {
       category: 'streetwear',
       categoryName: 'Streetwear High-Top',
       client: 'District Collective (Tokyo & Melbourne)',
-      image: '/assets/images/slider_hightop_sneaker.jpg',
+      image: '/assets/images/product_14.png',
       requirement: 'Streetwear skater sneaker demanding heavy-duty abrasion resistance, high-top padded ankle support, and customized colorways with vulcanized gum rubber sole durability.',
       solution: 'Developed double-stitched velvet matte suede with high-abrasion canvas panels and 360° sidewall vulcanized rubber foxing tape tested to withstand skate grip friction.',
       result: 'Sold out 3,000 pairs within 48 hours of drop. Currently in 4th production run with expanded colorways and private label custom packaging.',
@@ -156,14 +156,15 @@ export default function ProjectsPage() {
                 }}
               >
                 {/* Left Visual */}
-                <div style={{ position: 'relative', borderRadius: '12px', overflow: 'hidden', height: '360px' }}>
+                <div style={{ position: 'relative', borderRadius: '12px', overflow: 'hidden', height: '360px', backgroundColor: '#ffffff' }}>
                   <img 
                     src={proj.image} 
                     alt={proj.title}
                     style={{
                       width: '100%',
                       height: '100%',
-                      objectFit: 'cover'
+                      objectFit: 'contain',
+                      padding: '20px'
                     }}
                   />
                   <div style={{

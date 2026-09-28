@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, MessageSquare, Phone, MapPin, Mail, ShieldCheck } from 'lucide-react';
 
@@ -68,7 +68,7 @@ export default function HomeCtaSection() {
               </Link>
 
               <a 
-                href="https://wa.me/919429690496?text=Hello%20KS%20Shoes%2C%20I%20want%20to%20develop%20a%20footwear%20collection."
+                href="https://wa.me/919871906094?text=Hi%20KS%20Enterprises,%20I%20have%20an%20inquiry"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-outline btn-lg"
@@ -103,11 +103,11 @@ export default function HomeCtaSection() {
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                 <Phone size={15} color="var(--gold-light)" />
-                <a href="tel:+919429690496" style={{ color: '#121212', textDecoration: 'none' }}>+91 94296 90496</a>
+                <a href="tel:+919871906094" style={{ color: '#121212', textDecoration: 'none' }}>+91 98719 06094</a>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                 <Mail size={15} color="var(--gold-light)" />
-                <a href="mailto:contact@ksshoes.com" style={{ color: '#121212', textDecoration: 'none' }}>contact@ksshoes.com</a>
+                <a href="mailto:himanshutyagi020@gmail.com" style={{ color: '#121212', textDecoration: 'none' }}>himanshutyagi020@gmail.com</a>
               </div>
             </div>
 

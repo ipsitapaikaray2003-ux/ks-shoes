@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 
 export default function ContactSection({ selectedCategory, onShowToast }) {
   const [formData, setFormData] = useState({
@@ -46,7 +46,7 @@ export default function ContactSection({ selectedCategory, onShowToast }) {
           <div className="grid-2" style={{ gap: '50px', alignItems: 'center' }}>
             <div>
               <div className="section-label">Connect With Our Export Desk</div>
-              <h2>Let’s Build Your Next <span className="gold-text">Iconic Footwear Run</span></h2>
+              <h2>Letâ€™s Build Your Next <span className="gold-text">Iconic Footwear Run</span></h2>
               <div className="divider-short"></div>
               <p style={{ color: 'var(--grey-mid)', fontSize: '0.95rem', lineHeight: '1.8', marginBottom: '28px' }}>
                 Whether you need private-label production, bulk wholesale fulfillment, or bespoke footwear development, our international sales desk is ready to assist.
@@ -54,7 +54,7 @@ export default function ContactSection({ selectedCategory, onShowToast }) {
 
               <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', marginBottom: '30px' }}>
                 <div className="footer-contact-item" style={{ marginBottom: 0 }}>
-                  <div className="footer-contact-icon">📍</div>
+                  <div className="footer-contact-icon">ðŸ“</div>
                   <div className="footer-contact-text">
                     <strong>Manufacturing Headquarters:</strong><br />
                     Foundry Nagar Industrial Area, Agra, UP - 282006, India
@@ -62,18 +62,18 @@ export default function ContactSection({ selectedCategory, onShowToast }) {
                 </div>
 
                 <div className="footer-contact-item" style={{ marginBottom: 0 }}>
-                  <div className="footer-contact-icon">✉️</div>
+                  <div className="footer-contact-icon">âœ‰ï¸</div>
                   <div className="footer-contact-text">
                     <strong>Export Desk Email:</strong><br />
-                    <a href="mailto:contact@ksenterprise.in">contact@ksenterprise.in</a> / <a href="mailto:export@ksenterprise.in">export@ksenterprise.in</a>
+                    <a href="mailto:himanshutyagi020@gmail.com">himanshutyagi020@gmail.com</a> / <a href="mailto:himanshutyagi020@gmail.com">himanshutyagi020@gmail.com</a>
                   </div>
                 </div>
 
                 <div className="footer-contact-item" style={{ marginBottom: 0 }}>
-                  <div className="footer-contact-icon">📞</div>
+                  <div className="footer-contact-icon">ðŸ“ž</div>
                   <div className="footer-contact-text">
                     <strong>Global Trade Hotline &amp; WhatsApp:</strong><br />
-                    <a href="tel:+911234567890">+91 12345 67890</a> (Mon – Sat, 9:00 AM – 7:00 PM IST)
+                    <a href="tel:+919871906094">+91 98719 06094</a> (Mon â€“ Sat, 9:00 AM â€“ 7:00 PM IST)
                   </div>
                 </div>
               </div>
@@ -117,7 +117,7 @@ export default function ContactSection({ selectedCategory, onShowToast }) {
                       type="tel" 
                       id="phone" 
                       className="form-input" 
-                      placeholder="+91 12345 67890" 
+                      placeholder="+91 98719 06094" 
                       value={formData.phone}
                       onChange={handleChange}
                       required 

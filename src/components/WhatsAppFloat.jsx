@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 
 export default function WhatsAppFloat() {
   const [showTooltip, setShowTooltip] = useState(true);
@@ -12,7 +12,7 @@ export default function WhatsAppFloat() {
 
   const handleClick = () => {
     const msg = "Hello KS Enterprise! I would like to inquire about your footwear manufacturing, bulk catalogs, and export solutions.";
-    const url = `https://wa.me/911234567890?text=${encodeURIComponent(msg)}`;
+    const url = `https://wa.me/919871906094?text=${encodeURIComponent(msg)}`;
     window.open(url, '_blank');
   };
 
@@ -20,7 +20,7 @@ export default function WhatsAppFloat() {
     <div className="whatsapp-float">
       {showTooltip && (
         <div className="whatsapp-tooltip">
-          Chat with our Export Specialist 👋
+          Chat with our Export Specialist ðŸ‘‹
         </div>
       )}
       <div style={{ position: 'relative' }}>

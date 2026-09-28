@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 
 export default function ManufacturingVideoShowcase() {
   const [activeVideo, setActiveVideo] = useState('L3gp310VwUA');
@@ -29,7 +29,7 @@ export default function ManufacturingVideoShowcase() {
       desc: 'Every shoe begins with rigorous hide grading. We inspect tensile strength, grain consistency, and natural elasticity before master clickers cut individual upper panels using precision brass templates and laser cutting tables to ensure zero structural flaws.',
       highlights: [
         'Full-grain Italian calfskin & supple Agra crust leathers',
-        'Thickness calibrated to 1.2mm – 1.4mm for optimal breathability',
+        'Thickness calibrated to 1.2mm â€“ 1.4mm for optimal breathability',
         'Directional grain cutting for maximum shoe shape memory'
       ]
     },
@@ -123,7 +123,7 @@ export default function ManufacturingVideoShowcase() {
                 boxShadow: activeVideo === vid.id ? '0 4px 25px rgba(201,168,76,0.35)' : 'none'
               }}
             >
-              <span style={{ fontSize: '1rem' }}>▶</span>
+              <span style={{ fontSize: '1rem' }}>â–¶</span>
               <span>{vid.title}</span>
               <span style={{
                 fontSize: '0.7rem',
@@ -187,7 +187,7 @@ export default function ManufacturingVideoShowcase() {
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
               <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#4CAF50', display: 'inline-block' }}></span>
               <span style={{ color: 'var(--white-90)', fontWeight: 600 }}>Agra Factory Production Line</span>
-              <span>• Certified ISO 9001:2015 Footwear Facility</span>
+              <span>â€¢ Certified ISO 9001:2015 Footwear Facility</span>
             </div>
             <div style={{ color: 'var(--gold-light)' }}>
               100% In-House Lasting, Stitching &amp; Hand-Patina Finishing
@@ -302,7 +302,7 @@ export default function ManufacturingVideoShowcase() {
                 <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
                   {steps[activeStep].highlights.map((h, i) => (
                     <li key={i} style={{ display: 'flex', alignItems: 'center', gap: '10px', fontSize: '0.88rem', color: 'var(--white-90)' }}>
-                      <span style={{ color: 'var(--gold-primary)', fontSize: '1.1rem' }}>✓</span>
+                      <span style={{ color: 'var(--gold-primary)', fontSize: '1.1rem' }}>âœ“</span>
                       <span>{h}</span>
                     </li>
                   ))}
@@ -322,7 +322,7 @@ export default function ManufacturingVideoShowcase() {
                   Back to Top
                 </a>
                 <a
-                  href="https://wa.me/911234567890?text=Hello%20KS%20Enterprise%2C%20I%20saw%20your%20manufacturing%20video%20and%20want%20to%20know%20more%20about%20custom%20production."
+                  href="https://wa.me/919871906094?text=Hi%20KS%20Enterprises,%20I%20have%20an%20inquiry"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn btn-primary"
@@ -364,7 +364,7 @@ export default function ManufacturingVideoShowcase() {
                 fontWeight: 600,
                 backdropFilter: 'blur(8px)'
               }}>
-                ✦ Agra Atelier Verified
+                âœ¦ Agra Atelier Verified
               </div>
             </div>
           </div>

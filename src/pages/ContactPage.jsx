@@ -1,7 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import { motion } from 'framer-motion';
 
 export default function ContactPage({ onShowToast }) {
+  const formRef = useRef();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     company: '',
@@ -21,8 +24,18 @@ export default function ContactPage({ onShowToast }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if(onShowToast) onShowToast('Requirements submitted successfully! Our team will contact you shortly.');
-    setFormData({ name: '', company: '', mobile: '', email: '', industry: 'Men Footwear', application: '', volume: '', temperature: '', material: '', hasDesign: 'No (New Installation)' });
+    setIsSubmitting(true);
+    
+    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', formRef.current, 'YOUR_PUBLIC_KEY')
+      .then((result) => {
+        if(onShowToast) onShowToast('Requirements submitted successfully! Our team will contact you shortly.');
+        setFormData({ name: '', company: '', mobile: '', email: '', industry: 'Men Footwear', application: '', volume: '', temperature: '', material: '', hasDesign: 'No (New Installation)' });
+        setIsSubmitting(false);
+      }, (error) => {
+        console.error(error.text);
+        if(onShowToast) onShowToast('Failed to submit. Please contact us via WhatsApp or Email directly.');
+        setIsSubmitting(false);
+      });
   };
 
   return (
@@ -69,7 +82,7 @@ export default function ContactPage({ onShowToast }) {
               </div>
               <div>
                 <p style={cardLabelStyle}>OFFICIAL ENGINEERING EMAIL</p>
-                <p style={cardTitleStyle}>sales@ksenterprise.com</p>
+                <p style={cardTitleStyle}>himanshutyagi020@gmail.com</p>
                 <p style={cardDescStyle}>Send tech packs, specs & CAD drawings</p>
               </div>
             </div>
@@ -149,7 +162,7 @@ export default function ContactPage({ onShowToast }) {
               This allows our production engineers to calculate tooling costs, material consumption, and lead times accurately.
             </p>
 
-            <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+            <form ref={formRef} onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
               
               <div style={gridRowStyle}>
                 <div>
@@ -169,7 +182,7 @@ export default function ContactPage({ onShowToast }) {
                 </div>
                 <div>
                   <label style={labelStyle}>Email Address</label>
-                  <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="engineer@company.com" style={inputStyle} />
+                  <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="himanshutyagi020@gmail.com" style={inputStyle} />
                 </div>
               </div>
 
@@ -234,8 +247,9 @@ export default function ContactPage({ onShowToast }) {
                 }}
                 onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-2px)'}
                 onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}
+                disabled={isSubmitting}
               >
-                SUBMIT REQUIREMENT
+                {isSubmitting ? 'SUBMITTING...' : 'SUBMIT REQUIREMENT'}
               </button>
 
             </form>

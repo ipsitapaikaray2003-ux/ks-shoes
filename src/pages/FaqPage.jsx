@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+﻿import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 
 export default function FaqPage() {
@@ -19,12 +19,12 @@ export default function FaqPage() {
     {
       cat: 'moq',
       q: 'What is your Minimum Order Quantity (MOQ) for new brands and startups?',
-      a: 'Unlike traditional factories that require 1,000 to 5,000 pairs, our specialized startup launch tier offers low MOQs starting at 200–300 pairs per style/colorway across standard size curves. This enables emerging D2C brands to validate market demand without excessive inventory risk.'
+      a: 'Unlike traditional factories that require 1,000 to 5,000 pairs, our specialized startup launch tier offers low MOQs starting at 200â€“300 pairs per style/colorway across standard size curves. This enables emerging D2C brands to validate market demand without excessive inventory risk.'
     },
     {
       cat: 'moq',
       q: 'Can I split the MOQ across multiple sizes and colorways?',
-      a: 'Yes. Our 200–300 pair minimum can be distributed across a standard adult sizing curve (e.g. UK/India 6 to 11 or EU 40 to 45). Depending on the style, you can produce 1 or 2 core colorways in your initial launch run.'
+      a: 'Yes. Our 200â€“300 pair minimum can be distributed across a standard adult sizing curve (e.g. UK/India 6 to 11 or EU 40 to 45). Depending on the style, you can produce 1 or 2 core colorways in your initial launch run.'
     },
     {
       cat: 'sampling',
@@ -191,7 +191,7 @@ export default function FaqPage() {
                 Submit Technical RFQ
               </Link>
               <a 
-                href="https://wa.me/911234567890?text=Hello%20KS%20Enterprise%2C%20I%20have%20a%20question%20regarding%20footwear%20manufacturing."
+                href="https://wa.me/919871906094?text=Hi%20KS%20Enterprises,%20I%20have%20an%20inquiry"
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="btn btn-outline btn-sm"

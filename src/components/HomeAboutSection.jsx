@@ -75,8 +75,8 @@ export default function HomeAboutSection() {
               }}
             >
               <img 
-                src="/assets/images/craft_lasting.jpg" 
-                alt="KS Shoes Master Artisan Lasting & Craftsmanship" 
+                src="/assets/images/modern_shoe_factory.jpg" 
+                alt="KS Enterprises Modern Shoe Factory" 
                 style={{
                   width: '100%',
                   height: '540px',
@@ -111,7 +111,12 @@ export default function HomeAboutSection() {
 
           {/* Right: Large Heading, Concise Description & Statistics Area */}
           <div>
-            <span style={{
+            <motion.span 
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              style={{
               fontSize: '0.74rem',
               fontFamily: 'var(--font-accent)',
               fontWeight: 800,
@@ -122,9 +127,14 @@ export default function HomeAboutSection() {
               marginBottom: '14px'
             }}>
               Atelier Heritage • Industrial Scale
-            </span>
+            </motion.span>
 
-            <h2 style={{
+            <motion.h2 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              style={{
               fontSize: 'clamp(2.4rem, 4.4vw, 3.8rem)',
               lineHeight: 1.08,
               fontFamily: 'var(--font-accent)',
@@ -134,26 +144,36 @@ export default function HomeAboutSection() {
               letterSpacing: '-0.02em',
               margin: '0 0 24px 0'
             }}>
-              CRAFTED WITH PRECISION.
-            </h2>
+              ABOUT COMPANY
+            </motion.h2>
 
-            <p style={{
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              style={{
               fontSize: '1.05rem',
               color: 'var(--grey-mid)',
               lineHeight: 1.75,
               marginBottom: '20px'
             }}>
-              <strong>KS Shoes</strong> is an international contract footwear manufacturer headquartered in Agra, India. We unite generational artisan hand-lasting with computerized European machinery, serving discerning private label brands, high-growth athletic footwear labels, and industrial safety distributors worldwide.
-            </p>
+              <strong>KS Enterprises</strong> is a trusted footwear manufacturing company established on 1 October 2025, specializing in the production of high-quality sports shoes. Since our inception, we have focused on delivering durable, stylish, and comfortable footwear that meets the evolving demands of the Indian footwear market.
+            </motion.p>
 
-            <p style={{
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              style={{
               fontSize: '0.96rem',
               color: 'var(--grey-mid)',
               lineHeight: 1.7,
               marginBottom: '40px'
             }}>
-              Our integrated 65,000 sq. ft. production plant provides turnkey execution—from initial 3D anatomical last design and rapid 7-day sample prototyping to high-volume assembly lines, SATRA-certified laboratory testing, and worldwide export logistics.
-            </p>
+              With modern manufacturing practices, skilled craftsmanship, and a commitment to quality, KS Enterprises has built a reputation as a reliable manufacturing partner for leading footwear brands and private-label businesses.
+            </motion.p>
 
             {/* Small Statistics Area */}
             <div className="stats-row">

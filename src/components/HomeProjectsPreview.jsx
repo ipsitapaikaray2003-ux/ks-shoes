@@ -8,7 +8,7 @@ export default function HomeProjectsPreview() {
       id: 1,
       title: 'Veloce Athletic Footwear',
       category: 'Performance Running',
-      image: '/assets/images/slider_running_sneaker.jpg',
+      image: '/assets/images/product_11.png',
       requirement: 'Launch a high-rebound athletic running shoe in 60 days with an initial low MOQ of 300 pairs.',
       solution: 'Engineered custom jacquard mesh uppers with pre-tooled high-rebound dual-density EVA soles.',
       result: 'Delivered in 4 weeks. Scaled to 18,000 pairs over 12 months with 0.12% return rate.'
@@ -17,7 +17,7 @@ export default function HomeProjectsPreview() {
       id: 2,
       title: 'Aurelius Minimalist Court Sneaker',
       category: 'Bespoke Leather Sneaker',
-      image: '/assets/images/slider_court_sneaker.jpg',
+      image: '/assets/images/product_12.png',
       requirement: 'Luxury full-grain calfskin court sneaker with 360° stitched soles and debossed branding for European retail.',
       solution: 'Sourced LWG Gold certified Italian leather with computerized precision CNC clicking and hand-burnishing.',
       result: 'Recurring 2,500 pairs quarterly across 14 European luxury stockists.'
@@ -80,11 +80,11 @@ export default function HomeProjectsPreview() {
               className="b2b-card"
               style={{ padding: '36px', display: 'flex', flexDirection: 'column' }}
             >
-              <div style={{ position: 'relative', height: '260px', borderRadius: '10px', overflow: 'hidden', marginBottom: '24px' }}>
+              <div style={{ position: 'relative', height: '260px', borderRadius: '10px', overflow: 'hidden', marginBottom: '24px', backgroundColor: '#ffffff' }}>
                 <img 
                   src={c.image} 
                   alt={c.title}
-                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                  style={{ width: '100%', height: '100%', objectFit: 'contain', padding: '15px' }}
                 />
                 <div style={{
                   position: 'absolute',

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 
 export default function FaqSection() {
   const [openIndex, setOpenIndex] = useState(0);
@@ -6,7 +6,7 @@ export default function FaqSection() {
   const faqs = [
     {
       q: 'What is your Minimum Order Quantity (MOQ) for new startups and D2C brands?',
-      a: 'We understand that emerging brands cannot afford high bulk inventory risk. Unlike traditional factories requiring 1,000+ pairs, our specialized startup launch tier offers low MOQs starting at 200–300 pairs per style/colorway across standard size runs, allowing you to validate market demand with confidence.'
+      a: 'We understand that emerging brands cannot afford high bulk inventory risk. Unlike traditional factories requiring 1,000+ pairs, our specialized startup launch tier offers low MOQs starting at 200â€“300 pairs per style/colorway across standard size runs, allowing you to validate market demand with confidence.'
     },
     {
       q: 'How long does the prototype and sample development process take?',
@@ -54,7 +54,7 @@ export default function FaqSection() {
                   aria-expanded={isOpen}
                 >
                   <span>{faq.q}</span>
-                  <span className="faq-icon">{isOpen ? '✕' : '+'}</span>
+                  <span className="faq-icon">{isOpen ? 'âœ•' : '+'}</span>
                 </button>
                 {isOpen && (
                   <div className="faq-answer">
@@ -71,7 +71,7 @@ export default function FaqSection() {
             Have a question that is not answered here? Speak directly with our master production engineers.
           </p>
           <a 
-            href="https://wa.me/911234567890?text=Hello%20KS%20Enterprise%2C%20I%20have%20a%20question%20about%20your%20footwear%20manufacturing%20services."
+            href="https://wa.me/919871906094?text=Hi%20KS%20Enterprises,%20I%20have%20an%20inquiry"
             target="_blank" 
             rel="noopener noreferrer" 
             className="btn btn-outline btn-sm"

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+﻿import React, { useEffect } from 'react';
 
 export default function ProductModal({ product, onClose, onInquire }) {
   useEffect(() => {
@@ -20,8 +20,8 @@ export default function ProductModal({ product, onClose, onInquire }) {
   if (!product) return null;
 
   const handleWhatsApp = () => {
-    const msg = `Hello KS Enterprise! I am inquiring regarding the "${product.name}" (${product.categoryLabel}):\n• Upper: ${product.leather}\n• MOQ: ${product.moq}\nPlease share sample availability and export wholesale price matrix.`;
-    const url = `https://wa.me/911234567890?text=${encodeURIComponent(msg)}`;
+    const msg = `Hello KS Enterprise! I am inquiring regarding the "${product.name}" (${product.categoryLabel}):\nâ€¢ Upper: ${product.leather}\nâ€¢ MOQ: ${product.moq}\nPlease share sample availability and export wholesale price matrix.`;
+    const url = `https://wa.me/919871906094?text=${encodeURIComponent(msg)}`;
     window.open(url, '_blank');
   };
 
@@ -72,7 +72,7 @@ export default function ProductModal({ product, onClose, onInquire }) {
                       borderRadius: 'var(--rad-pill)',
                       color: '#555555'
                     }}>
-                      ✓ {feat}
+                      âœ“ {feat}
                     </span>
                   ))}
                 </div>

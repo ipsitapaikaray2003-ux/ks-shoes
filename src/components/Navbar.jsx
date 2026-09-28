@@ -24,7 +24,9 @@ export default function Navbar() {
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
     { name: 'Products', path: '/products' },
+    { name: 'Services', path: '/services' },
     { name: 'Manufacturing', path: '/manufacturing' },
+    { name: 'Expertise', path: '/expertise' },
     { name: 'Technology', path: '/quality' }, // Reusing quality route
     { name: 'Contact', path: '/contact' }
   ];
@@ -69,7 +71,7 @@ export default function Navbar() {
                     height: scrolled ? '60px' : '100px',
                     width: 'auto',
                     objectFit: 'contain',
-                    filter: (!scrolled && ['/', '/about', '/category', '/contact'].some(p => location.pathname.startsWith(p) || location.pathname === p)) ? 'brightness(0) invert(1)' : 'brightness(0) saturate(100%)',
+                    filter: (!scrolled && ['/', '/about', '/category', '/contact', '/expertise', '/services'].some(p => location.pathname.startsWith(p) || location.pathname === p)) ? 'brightness(0) invert(1)' : 'brightness(0) saturate(100%)',
                     transition: 'all 0.3s ease'
                   }}
                 />
@@ -85,7 +87,7 @@ export default function Navbar() {
               flex: '1 1 auto'
             }} className="desktop-nav">
               {navLinks.map((link) => {
-                const isDarkHero = !scrolled && ['/', '/about', '/category', '/contact'].some(p => location.pathname.startsWith(p) || location.pathname === p);
+                const isDarkHero = !scrolled && ['/', '/about', '/category', '/contact', '/expertise', '/services'].some(p => location.pathname.startsWith(p) || location.pathname === p);
                 const textColor = isDarkHero ? '#FFF' : '#111';
                 return (
                   <NavLink
@@ -121,20 +123,20 @@ export default function Navbar() {
                     letterSpacing: '0.1em',
                     fontWeight: 600,
                     textTransform: 'uppercase',
-                    color: (!scrolled && ['/', '/about', '/category', '/contact'].some(p => location.pathname.startsWith(p) || location.pathname === p)) ? '#FFF' : '#111',
+                    color: (!scrolled && ['/', '/about', '/category', '/contact', '/expertise', '/services'].some(p => location.pathname.startsWith(p) || location.pathname === p)) ? '#FFF' : '#111',
                     backgroundColor: 'transparent',
-                    border: (!scrolled && ['/', '/about', '/category', '/contact'].some(p => location.pathname.startsWith(p) || location.pathname === p)) ? '1px solid rgba(255,255,255,0.5)' : '1px solid #111',
+                    border: (!scrolled && ['/', '/about', '/category', '/contact', '/expertise', '/services'].some(p => location.pathname.startsWith(p) || location.pathname === p)) ? '1px solid rgba(255,255,255,0.5)' : '1px solid #111',
                     textDecoration: 'none',
                     borderRadius: '2px',
                     transition: 'all 0.3s ease'
                   }}
                   onMouseOver={(e) => {
-                    const isDarkHero = (!scrolled && ['/', '/about', '/category', '/contact'].some(p => location.pathname.startsWith(p) || location.pathname === p));
+                    const isDarkHero = (!scrolled && ['/', '/about', '/category', '/contact', '/expertise', '/services'].some(p => location.pathname.startsWith(p) || location.pathname === p));
                     e.currentTarget.style.backgroundColor = isDarkHero ? '#FFF' : '#111';
                     e.currentTarget.style.color = isDarkHero ? '#000' : '#FFF';
                   }}
                   onMouseOut={(e) => {
-                    const isDarkHero = (!scrolled && ['/', '/about', '/category', '/contact'].some(p => location.pathname.startsWith(p) || location.pathname === p));
+                    const isDarkHero = (!scrolled && ['/', '/about', '/category', '/contact', '/expertise', '/services'].some(p => location.pathname.startsWith(p) || location.pathname === p));
                     e.currentTarget.style.backgroundColor = 'transparent';
                     e.currentTarget.style.color = isDarkHero ? '#FFF' : '#111';
                   }}
@@ -152,7 +154,7 @@ export default function Navbar() {
                   justifyContent: 'center',
                   background: 'transparent',
                   border: 'none',
-                  color: (!scrolled && ['/', '/about', '/category', '/contact'].some(p => location.pathname.startsWith(p) || location.pathname === p)) ? '#FFF' : '#111',
+                  color: (!scrolled && ['/', '/about', '/category', '/contact', '/expertise', '/services', '/brands'].some(p => location.pathname.startsWith(p) || location.pathname === p)) ? '#FFF' : '#111',
                   cursor: 'pointer',
                   zIndex: 1001,
                   transition: 'color 0.3s ease'

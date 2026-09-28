@@ -85,7 +85,7 @@ export default function QualityTechnologyPage() {
 
   return (
     <div style={{ 
-      background: 'linear-gradient(to bottom, rgba(8,8,8,0.85), rgba(8,8,8,0.98)), url(/assets/images/cinematic_3d_sneaker_hero.jpg)',
+      background: 'linear-gradient(to bottom, rgba(8,8,8,0.85), rgba(8,8,8,0.98)), url(/assets/images/product_11.png)',
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       backgroundAttachment: 'fixed',

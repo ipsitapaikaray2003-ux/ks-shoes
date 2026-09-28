@@ -18,6 +18,7 @@ import QualityTechnologyPage from './pages/QualityTechnologyPage';
 import ContactPage from './pages/ContactPage';
 import FaqPage from './pages/FaqPage';
 import CategoryPage from './pages/CategoryPage';
+import ExpertisePage from './pages/ExpertisePage';
 
 import ErrorBoundary from './components/ErrorBoundary';
 
@@ -53,6 +54,7 @@ export default function App() {
             <Route path="/manufacturing" element={<ManufacturingPage />} />
             <Route path="/products" element={<ProductsPage onOpenModal={handleOpenModal} />} />
             <Route path="/services" element={<ServicesPage />} />
+            <Route path="/expertise" element={<ExpertisePage />} />
             <Route path="/category" element={<CategoryPage />} />
             <Route path="/projects" element={<ProjectsPage />} />
             <Route path="/case-studies" element={<ProjectsPage />} />

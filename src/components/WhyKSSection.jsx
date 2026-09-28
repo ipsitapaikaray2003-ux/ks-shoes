@@ -1,44 +1,63 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Lightbulb, Users, Factory, Gem, ShieldCheck, Tag, Clock } from 'lucide-react';
 
 const features = [
   {
-    title: 'End-to-End Solutions',
-    desc: 'From custom shoe design and prototype development to high-volume bulk production, branding, and final packaging, we handle the entire lifecycle.',
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
-        <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
-        <line x1="12" y1="22.08" x2="12" y2="12"></line>
-      </svg>
-    )
+    title: 'Innovative Product Design & Development',
+    desc: 'From initial sketch to final CAD, we bring fresh, modern aesthetics to life.',
+    icon: <Lightbulb size={28} />,
+    hoverBg: 'linear-gradient(135deg, #141E30 0%, #243B55 100%)', // Midnight Blue
+    hoverShadow: 'rgba(36, 59, 85, 0.3)'
   },
   {
-    title: 'Low MOQ for Brands',
-    desc: 'We support startups and emerging D2C brands by offering highly flexible Minimum Order Quantities (MOQ), allowing you to launch with minimal risk and investment.',
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 2v20"></path>
-        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-      </svg>
-    )
+    title: 'Experienced Design & Technical Team',
+    desc: 'Our veteran engineers and designers ensure every silhouette is structurally perfect.',
+    icon: <Users size={28} />,
+    hoverBg: 'linear-gradient(135deg, #42275a 0%, #734b6d 100%)', // Royal Plum
+    hoverShadow: 'rgba(115, 75, 109, 0.3)'
   },
   {
-    title: 'Flexible OEM & ODM',
-    desc: 'Whether we are manufacturing your specific custom designs (OEM) or you are customizing our ready-to-use premium catalogs (ODM), our in-house production adapts to you.',
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="12" cy="12" r="3"></circle>
-        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
-      </svg>
-    )
+    title: 'Advanced Manufacturing Facilities',
+    desc: 'State-of-the-art machinery meets generational artisan craftsmanship.',
+    icon: <Factory size={28} />,
+    hoverBg: 'linear-gradient(135deg, #2b4333 0%, #39875a 100%)', // Emerald Green
+    hoverShadow: 'rgba(57, 135, 90, 0.3)'
+  },
+  {
+    title: 'Premium Quality Materials',
+    desc: 'We source only top-grade leathers, advanced meshes, and durable outsoles.',
+    icon: <Gem size={28} />,
+    hoverBg: 'linear-gradient(135deg, #C9A84C 0%, #9F8232 100%)', // Signature Gold
+    hoverShadow: 'rgba(201, 168, 76, 0.3)'
+  },
+  {
+    title: 'Stringent Quality Control',
+    desc: 'Multi-tier lab testing ensures zero defects and lasting durability.',
+    icon: <ShieldCheck size={28} />,
+    hoverBg: 'linear-gradient(135deg, #432b35 0%, #873940 100%)', // Deep Burgundy
+    hoverShadow: 'rgba(135, 57, 64, 0.3)'
+  },
+  {
+    title: 'Competitive Pricing',
+    desc: 'Scaled production allows us to offer premium manufacturing at viable rates.',
+    icon: <Tag size={28} />,
+    hoverBg: 'linear-gradient(135deg, #2C3E50 0%, #3498DB 100%)', // Ocean Blue
+    hoverShadow: 'rgba(52, 152, 219, 0.3)'
+  },
+  {
+    title: 'On-Time Delivery',
+    desc: 'Streamlined logistics and reliable supply chains ensure your launch dates are met.',
+    icon: <Clock size={28} />,
+    hoverBg: 'linear-gradient(135deg, #4e54c8 0%, #8f94fb 100%)', // Sapphire Purple
+    hoverShadow: 'rgba(143, 148, 251, 0.3)'
   }
 ];
 
 export default function WhyKSSection() {
   return (
     <section style={{ padding: '120px 5%', background: '#F8F7F5', color: '#111' }}>
-      <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+      <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
         
         <div style={{ textAlign: 'center', marginBottom: '80px' }}>
           <motion.h2 
@@ -46,9 +65,9 @@ export default function WhyKSSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            style={{ fontSize: 'clamp(48px, 8vw, 80px)', fontWeight: 600, letterSpacing: '-0.03em', margin: '0 0 24px 0' }}
+            style={{ fontSize: 'clamp(40px, 8vw, 70px)', fontWeight: 700, letterSpacing: '-0.03em', margin: '0 0 24px 0', textTransform: 'uppercase' }}
           >
-            Why KS?
+            Why Choose KS Enterprises
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -57,61 +76,89 @@ export default function WhyKSSection() {
             transition={{ duration: 0.6, delay: 0.1 }}
             style={{ fontSize: '1.25rem', color: '#555', maxWidth: '650px', margin: '0 auto', lineHeight: 1.6 }}
           >
-            We are a specialized private-label shoe manufacturer providing end-to-end production solutions for startups, D2C brands, and established labels.
+            We are your trusted manufacturing partner, providing end-to-end production solutions with a relentless focus on quality and innovation.
           </motion.p>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '40px' }}>
+        <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '30px' }}>
           {features.map((feature, idx) => (
             <motion.div 
               key={idx}
-              initial={{ opacity: 0, y: 40 }}
+              className="ks-feature-card"
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.7, delay: 0.2 + (idx * 0.1), ease: [0.21, 0.47, 0.32, 0.98] }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.6, delay: idx * 0.05, ease: [0.21, 0.47, 0.32, 0.98] }}
               style={{
-                background: '#fff',
-                padding: '48px 40px',
-                borderRadius: '32px',
-                boxShadow: '0 20px 40px rgba(0,0,0,0.03)',
+                flex: '1 1 300px',
+                maxWidth: '420px',
+                padding: '40px 30px',
+                borderRadius: '24px',
+                boxShadow: '0 10px 30px rgba(0,0,0,0.02)',
                 display: 'flex',
                 flexDirection: 'column',
-                gap: '24px',
-                transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-                cursor: 'default'
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = 'translateY(-10px)';
-                e.currentTarget.style.boxShadow = '0 30px 60px rgba(0,0,0,0.06)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.boxShadow = '0 20px 40px rgba(0,0,0,0.03)';
+                gap: '20px',
+                border: '1px solid rgba(0,0,0,0.03)',
+                cursor: 'default',
+                '--hover-bg': feature.hoverBg,
+                '--hover-shadow': feature.hoverShadow
               }}
             >
-              <div style={{ 
-                width: '64px', 
-                height: '64px', 
-                borderRadius: '50%', 
-                background: '#111', 
-                color: '#fff',
+              <div className="feature-icon-box" style={{ 
+                width: '56px', 
+                height: '56px', 
+                borderRadius: '16px', 
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center'
               }}>
                 {feature.icon}
               </div>
-              <h3 style={{ fontSize: '1.75rem', fontWeight: 500, margin: 0, letterSpacing: '-0.02em' }}>
-                {feature.title}
-              </h3>
-              <p style={{ color: '#666', lineHeight: 1.6, margin: 0, fontSize: '1.05rem' }}>
-                {feature.desc}
-              </p>
+              <div>
+                <h3 style={{ fontSize: '1.4rem', fontWeight: 600, margin: '0 0 10px 0', letterSpacing: '-0.01em', lineHeight: 1.3 }}>
+                  {feature.title}
+                </h3>
+                <p className="feature-desc" style={{ lineHeight: 1.6, margin: 0, fontSize: '1rem' }}>
+                  {feature.desc}
+                </p>
+              </div>
             </motion.div>
           ))}
         </div>
 
       </div>
+
+      <style>{`
+        .ks-feature-card {
+          background: #fff;
+          color: #111;
+          transition: transform 0.4s cubic-bezier(0.21, 0.47, 0.32, 0.98), box-shadow 0.4s ease, background 0.4s ease, border-color 0.4s ease;
+        }
+        .ks-feature-card .feature-icon-box {
+          background: rgba(201, 168, 76, 0.1);
+          color: var(--gold-primary, #C9A84C);
+          transition: all 0.4s ease;
+        }
+        .ks-feature-card .feature-desc {
+          color: #666;
+          transition: color 0.4s ease;
+        }
+        
+        .ks-feature-card:hover {
+          transform: translateY(-8px);
+          background: var(--hover-bg, var(--gold-primary, #C9A84C));
+          color: #fff;
+          box-shadow: 0 20px 40px var(--hover-shadow, rgba(201, 168, 76, 0.3));
+          border-color: transparent;
+        }
+        .ks-feature-card:hover .feature-icon-box {
+          background: rgba(255, 255, 255, 0.2);
+          color: #fff;
+        }
+        .ks-feature-card:hover .feature-desc {
+          color: rgba(255, 255, 255, 0.9);
+        }
+      `}</style>
     </section>
   );
 }

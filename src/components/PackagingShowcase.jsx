@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 
 export default function PackagingShowcase() {
   const [activeFinish, setActiveFinish] = useState('onyx');
@@ -20,22 +20,22 @@ export default function PackagingShowcase() {
 
   const packagingItems = [
     {
-      icon: '📦',
+      icon: 'ðŸ“¦',
       title: 'Rigid Gold-Foil Shoe Boxes',
       desc: 'Crafted with 1200gsm high-density greyboard, hidden magnetic closures, matte soft-touch anti-scratch lamination, and hot-stamped branding.'
     },
     {
-      icon: '🏷️',
+      icon: 'ðŸ·ï¸',
       title: 'Debossed Insoles & Tongue Badges',
       desc: 'Precision heat-pressed and laser-etched logos on genuine calfskin sockliners, woven tongue labels, and sculpted TPU heel counters.'
     },
     {
-      icon: '🌿',
+      icon: 'ðŸŒ¿',
       title: 'Branded Cotton Dust Bags & Paper',
       desc: 'Custom-dyed 180gsm breathable organic cotton drawstrings and personalized 28gsm acid-free tissue paper protecting leathers.'
     },
     {
-      icon: '📊',
+      icon: 'ðŸ“Š',
       title: 'Retail Hangtags, Barcodes & EANs',
       desc: 'Turnkey retail preparation with custom die-cut matte hangtags, GS1-certified EAN/UPC barcodes, and export corrugated master cartons.'
     }
@@ -202,7 +202,7 @@ export default function PackagingShowcase() {
                 color: 'var(--white-90)',
                 lineHeight: 1.6
               }}>
-                💡 <strong>Startup Friendly:</strong> Full custom packaging available on orders starting from 200 pairs. We provide 3D digital box mockups before mass production.
+                ðŸ’¡ <strong>Startup Friendly:</strong> Full custom packaging available on orders starting from 200 pairs. We provide 3D digital box mockups before mass production.
               </div>
             </div>
           </div>
@@ -224,7 +224,7 @@ export default function PackagingShowcase() {
 
           <div style={{ textAlign: 'center', marginTop: '40px' }}>
             <a 
-              href="https://wa.me/911234567890?text=Hello%20KS%20Enterprise%2C%20I%20would%20like%20to%20see%20samples%20of%20your%20custom%20shoe%20boxes%20and%20private%20label%20packaging." 
+              href="https://wa.me/919871906094?text=Hi%20KS%20Enterprises,%20I%20have%20an%20inquiry" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="btn btn-primary btn-sm animate-pulse-gold"

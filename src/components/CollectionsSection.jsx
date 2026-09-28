@@ -8,28 +8,28 @@ export default function CollectionsSection() {
       id: 1, 
       title: 'Men Footwear', 
       subtitle: 'Custom', 
-      image: '/assets/images/ks_men_runner_sneaker.jpg',
+      image: '/assets/images/product_11.png',
       link: '/category?category=men'
     },
     { 
       id: 2, 
       title: 'Women Footwear', 
       subtitle: 'Custom', 
-      image: '/assets/images/ks_women_footwear.jpg',
+      image: '/assets/images/product_12.png',
       link: '/category?category=women'
     },
     { 
       id: 3, 
       title: 'Kids Footwear', 
       subtitle: 'Custom', 
-      image: '/assets/images/ks_kids_footwear.jpg',
+      image: '/assets/images/product_13.png',
       link: '/category?category=kids'
     },
     { 
       id: 4, 
       title: 'Corporate Gifting', 
       subtitle: 'Custom', 
-      image: '/assets/images/ks_corporate_shoe.jpg',
+      image: '/assets/images/product_14.png',
       link: '/category?category=corporate'
     }
   ];
@@ -69,20 +69,21 @@ export default function CollectionsSection() {
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 300 }}
                 style={{
-                  width: '220px',
-                  height: '220px',
-                  borderRadius: '50%',
+                  width: '100%',
+                  height: '200px',
+                  borderRadius: '16px',
                   overflow: 'hidden',
                   marginBottom: '24px',
                   boxShadow: '0 10px 30px rgba(0,0,0,0.5)',
-                  border: '2px solid rgba(214,180,90,0.2)',
-                  cursor: 'pointer'
+                  border: '1px solid rgba(214,180,90,0.2)',
+                  cursor: 'pointer',
+                  backgroundColor: '#f4f4f4'
                 }}
               >
                 <img 
                   src={cat.image} 
                   alt={cat.title} 
-                  style={{ width: '100%', height: '100%', objectFit: 'cover', filter: 'contrast(1.05)' }} 
+                  style={{ width: '100%', height: '100%', objectFit: 'contain', padding: '20px' }} 
                 />
               </motion.div>
 

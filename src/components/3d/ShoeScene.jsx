@@ -101,6 +101,9 @@ function SceneContent({ scrollProgress, isMobile }) {
       {/* Atmospheric particles */}
       <Particles count={particleCount} scrollProgress={scrollProgress} />
 
+      {/* Environment map for realistic PBR reflections */}
+      <Environment preset="studio" />
+
       {/* Main shoe */}
       <group ref={shoeGroupRef}>
         <ShoeModel ref={shoeRefs} scale={1.15} />
