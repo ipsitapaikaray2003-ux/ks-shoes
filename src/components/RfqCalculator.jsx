@@ -1,4 +1,4 @@
-﻿import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo } from 'react';
 
 export default function RfqCalculator({ selectedCategory, onCategoryChange }) {
   const [category, setCategory] = useState(selectedCategory || 'sneakers');
@@ -165,7 +165,7 @@ export default function RfqCalculator({ selectedCategory, onCategoryChange }) {
 
                 <div className="calc-stat-row">
                   <span className="calc-stat-label">Quality Protocol</span>
-                  <span className="calc-stat-value">SATRA Testing &amp; ISO 9001</span>
+                  <span className="calc-stat-value">100% Defect Auditing</span>
                 </div>
 
                 <div style={{ marginTop: '18px', display: 'flex', flexDirection: 'column', gap: '12px' }}>

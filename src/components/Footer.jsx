@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { MapPin, Phone, Mail, MessageSquare, ShieldCheck, Factory, Award, ArrowRight } from 'lucide-react';
+import { MessageSquare } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -16,91 +16,12 @@ export default function Footer() {
       }}
     >
       <div className="container-lg">
-        {/* Top Feature Certifications Strip */}
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
-          gap: '30px',
-          paddingBottom: '50px',
-          marginBottom: '50px',
-          borderBottom: '1px solid rgba(0, 0, 0, 0.05)'
-        }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
-            <div style={{
-              width: '48px',
-              height: '48px',
-              borderRadius: '12px',
-              background: '#FAFAFA',
-              border: '1px solid rgba(0, 0, 0, 0.06)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              color: '#8B6914',
-              boxShadow: '0 4px 10px rgba(0,0,0,0.02)'
-            }}>
-              <Factory size={22} strokeWidth={1.5} />
-            </div>
-            <div>
-              <h6 style={{ margin: 0, fontSize: '0.85rem', fontWeight: 800, color: '#121212', letterSpacing: '0.04em', textTransform: 'uppercase' }}>
-                Agra Manufacturing
-              </h6>
-              <span style={{ fontSize: '0.8rem', color: '#666666', marginTop: '4px', display: 'block' }}>10,000+ Pairs Daily Capacity</span>
-            </div>
-          </div>
-
-          <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
-            <div style={{
-              width: '48px',
-              height: '48px',
-              borderRadius: '12px',
-              background: '#FAFAFA',
-              border: '1px solid rgba(0, 0, 0, 0.06)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              color: '#8B6914',
-              boxShadow: '0 4px 10px rgba(0,0,0,0.02)'
-            }}>
-              <ShieldCheck size={22} strokeWidth={1.5} />
-            </div>
-            <div>
-              <h6 style={{ margin: 0, fontSize: '0.85rem', fontWeight: 800, color: '#121212', letterSpacing: '0.04em', textTransform: 'uppercase' }}>
-                SATRA &amp; ISO 9001
-              </h6>
-              <span style={{ fontSize: '0.8rem', color: '#666666', marginTop: '4px', display: 'block' }}>100% Defect Auditing</span>
-            </div>
-          </div>
-
-          <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
-            <div style={{
-              width: '48px',
-              height: '48px',
-              borderRadius: '12px',
-              background: '#FAFAFA',
-              border: '1px solid rgba(0, 0, 0, 0.06)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              color: '#8B6914',
-              boxShadow: '0 4px 10px rgba(0,0,0,0.02)'
-            }}>
-              <Award size={22} strokeWidth={1.5} />
-            </div>
-            <div>
-              <h6 style={{ margin: 0, fontSize: '0.85rem', fontWeight: 800, color: '#121212', letterSpacing: '0.04em', textTransform: 'uppercase' }}>
-                Global OEM Partner
-              </h6>
-              <span style={{ fontSize: '0.8rem', color: '#666666', marginTop: '4px', display: 'block' }}>Serving Brands in 20+ Countries</span>
-            </div>
-          </div>
-        </div>
-
         {/* Multi-Column Main Footer Grid */}
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
           gap: '50px',
-          marginBottom: '70px'
+          marginBottom: '50px'
         }}>
           {/* Col 1: Brand Story */}
           <div style={{ maxWidth: '320px' }}>
@@ -225,54 +146,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Col 4: Factory Desk & Contacts */}
-          <div>
-            <h5 style={{
-              fontFamily: 'var(--font-accent)',
-              fontSize: '0.85rem',
-              fontWeight: 800,
-              letterSpacing: '0.15em',
-              textTransform: 'uppercase',
-              color: '#121212',
-              marginBottom: '24px'
-            }}>
-              Factory Desk
-            </h5>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '18px', fontSize: '0.9rem', color: '#555555' }}>
-              <div style={{ display: 'flex', gap: '12px' }}>
-                <MapPin size={18} color="#8B6914" style={{ flexShrink: 0, marginTop: '2px' }} />
-                <span style={{ lineHeight: 1.6 }}>Foundry Nagar Industrial Area, Agra, Uttar Pradesh - 282006, India</span>
-              </div>
-              <div style={{ display: 'flex', gap: '12px' }}>
-                <Phone size={18} color="#8B6914" style={{ flexShrink: 0 }} />
-                <a href="tel:+919871906094" style={{ color: '#121212', textDecoration: 'none', transition: 'color 0.2s ease', fontWeight: 600 }} onMouseEnter={e => e.target.style.color = '#8B6914'} onMouseLeave={e => e.target.style.color = '#121212'}>
-                  +91 98719 06094
-                </a>
-              </div>
-              <div style={{ display: 'flex', gap: '12px' }}>
-                <Mail size={18} color="#8B6914" style={{ flexShrink: 0 }} />
-                <a href="mailto:himanshutyagi020@gmail.com" style={{ color: '#121212', textDecoration: 'none', transition: 'color 0.2s ease', fontWeight: 600 }} onMouseEnter={e => e.target.style.color = '#8B6914'} onMouseLeave={e => e.target.style.color = '#121212'}>
-                  himanshutyagi020@gmail.com
-                </a>
-              </div>
-            </div>
-            
-            <div style={{ marginTop: '30px' }}>
-              <Link to="/contact" style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '8px',
-                color: '#8B6914',
-                textDecoration: 'none',
-                fontWeight: 700,
-                fontSize: '0.9rem',
-                textTransform: 'uppercase',
-                letterSpacing: '0.05em'
-              }}>
-                Start A Project <ArrowRight size={16} strokeWidth={2.5} />
-              </Link>
-            </div>
-          </div>
         </div>
 
         {/* Bottom Bar with Qubnix Technology Credit & Privacy Policy */}

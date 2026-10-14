@@ -123,7 +123,7 @@ export default function QualityTechnologyPage() {
               <span style={{ color: 'var(--gold-light)' }}>Global Standards.</span>
             </h1>
             <p style={{ fontSize: '1.05rem', color: 'var(--grey-mid)', lineHeight: 1.7 }}>
-              Quality at KS Shoes is an engineered discipline, not an afterthought. Every prototype, production batch, and finished consignment adheres to SATRA, ISO, and REACH international standards.
+              Quality at KS Shoes is an engineered discipline, not an afterthought. Every prototype, production batch, and finished consignment adheres to rigorous physical endurance, comfort, and safety standards.
             </p>
           </div>
 
@@ -156,10 +156,10 @@ export default function QualityTechnologyPage() {
             </div>
             <div>
               <span style={{ fontSize: '2.2rem', fontWeight: 900, color: 'var(--gold-light)', display: 'block', lineHeight: 1 }}>
-                ISO 9001
+                100% QA
               </span>
               <span style={{ fontSize: '0.8rem', color: 'var(--grey-mid)', marginTop: '6px', display: 'block' }}>
-                Certified Manufacturing Plant
+                Multi-Stage Quality Auditing
               </span>
             </div>
             <div>
@@ -315,22 +315,22 @@ export default function QualityTechnologyPage() {
                 Global Compliance Verified
               </h3>
               <p style={{ fontSize: '0.9rem', color: 'var(--grey-mid)', lineHeight: 1.7 }}>
-                Our Agra manufacturing campus is regularly audited by third-party international agencies, ensuring safe working conditions, environmental responsibility, and consistent product quality.
+                Our manufacturing facilities are regularly audited by third-party international agencies, ensuring safe working conditions, environmental responsibility, and consistent product quality.
               </p>
             </div>
 
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
               <div style={{ padding: '16px', background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.06)', borderRadius: '8px' }}>
-                <strong style={{ color: 'var(--gold-light)', display: 'block', fontSize: '0.92rem' }}>ISO 9001:2015</strong>
-                <span style={{ fontSize: '0.76rem', color: 'var(--grey-mid)' }}>Certified Quality Management</span>
+                <strong style={{ color: 'var(--gold-light)', display: 'block', fontSize: '0.92rem' }}>Total Quality</strong>
+                <span style={{ fontSize: '0.76rem', color: 'var(--grey-mid)' }}>Standardized Manufacturing QC</span>
               </div>
               <div style={{ padding: '16px', background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.06)', borderRadius: '8px' }}>
                 <strong style={{ color: 'var(--gold-light)', display: 'block', fontSize: '0.92rem' }}>LWG Gold</strong>
                 <span style={{ fontSize: '0.76rem', color: 'var(--grey-mid)' }}>Leather Working Group Certified</span>
               </div>
               <div style={{ padding: '16px', background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.06)', borderRadius: '8px' }}>
-                <strong style={{ color: 'var(--gold-light)', display: 'block', fontSize: '0.92rem' }}>SATRA Lab</strong>
-                <span style={{ fontSize: '0.76rem', color: 'var(--grey-mid)' }}>Member Testing Facility</span>
+                <strong style={{ color: 'var(--gold-light)', display: 'block', fontSize: '0.92rem' }}>In-House Lab</strong>
+                <span style={{ fontSize: '0.76rem', color: 'var(--grey-mid)' }}>Mechanical Endurance Testing</span>
               </div>
               <div style={{ padding: '16px', background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.06)', borderRadius: '8px' }}>
                 <strong style={{ color: 'var(--gold-light)', display: 'block', fontSize: '0.92rem' }}>REACH Europe</strong>

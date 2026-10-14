@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 export default function CorporateGiftingPage({ onShowToast }) {
@@ -69,7 +69,7 @@ export default function CorporateGiftingPage({ onShowToast }) {
         'Slip-Resistant Oil & Water Repellent Outsoles',
         'Durable Scuff-Guard Action Leather Uppers',
         'Standardized Sizing & Multi-Branch Dispatch',
-        'ISO 9001 Tested for Rigorous Everyday Wear'
+        'Lab-Tested for Rigorous Everyday Wear'
       ]
     }
   ];

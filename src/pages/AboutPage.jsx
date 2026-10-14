@@ -24,13 +24,13 @@ export default function AboutPage() {
             transition={{ duration: 1 }}
           >
             <span style={{ color: 'var(--gold-primary)', fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '0.3em', fontWeight: 600, display: 'block', marginBottom: '20px' }}>
-              Our Legacy
+              About KS Enterprises
             </span>
             <h1 style={{ fontSize: 'clamp(40px, 8vw, 90px)', fontWeight: 800, margin: '0 0 24px 0', letterSpacing: '-0.03em', lineHeight: 1.1, color: '#ffffff' }}>
               THE ART OF <br /> <span style={{ color: 'var(--gold-primary)' }}>SHOEMAKING</span>
             </h1>
             <p style={{ color: '#bbb', fontSize: '1.2rem', maxWidth: '600px', margin: '0 auto', lineHeight: 1.6 }}>
-              Decades of mastering the perfect balance between traditional Indian craftsmanship and global manufacturing innovation.
+              Mastering the balance between precision engineering, craftsmanship, and modern footwear innovation.
             </p>
           </motion.div>
         </div>
@@ -52,7 +52,7 @@ export default function AboutPage() {
               <strong>KS Enterprises</strong> is a trusted footwear manufacturing company established on 1 October 2025, specializing in the production of high-quality sports shoes. Since our inception, we have focused on delivering durable, stylish, and comfortable footwear that meets the evolving demands of the Indian footwear market.
             </p>
             <p style={{ fontSize: '1.15rem', color: '#aaa', lineHeight: 1.8 }}>
-              With modern manufacturing practices, skilled craftsmanship, and a commitment to quality, KS Enterprises has built a reputation as a reliable manufacturing partner for leading footwear brands and private-label businesses.
+              Driven by modern manufacturing practices, skilled craftsmanship, and high-performance materials, KS Enterprises ensures that every pair of sports shoes delivers exceptional comfort, athletic durability, and contemporary styling.
             </p>
           </motion.div>
           
@@ -64,48 +64,27 @@ export default function AboutPage() {
             transition={{ duration: 0.8 }}
           >
             <div style={{ position: 'absolute', top: '-20px', left: '-20px', width: '100%', height: '100%', border: '1px solid var(--gold-primary)', borderRadius: '16px', zIndex: 0 }}></div>
-            <img src="/assets/images/modern_shoe_factory.jpg" alt="KS Enterprises Modern Factory" style={{ width: '100%', borderRadius: '16px', position: 'relative', zIndex: 1, boxShadow: '0 20px 40px rgba(0,0,0,0.5)', filter: 'contrast(1.1)' }} />
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Global Scale Section */}
-      <section style={{ padding: '120px 5%', background: '#0a0a0a' }}>
-        <div style={{ maxWidth: '1400px', margin: '0 auto', display: 'flex', flexWrap: 'wrap-reverse', gap: '80px', alignItems: 'center' }}>
-          <motion.div 
-            style={{ flex: '1 1 500px', position: 'relative' }}
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8 }}
-          >
-            <img src="/assets/images/hightech_factory_cinematic.jpg" alt="Modern Factory" style={{ width: '100%', borderRadius: '16px', boxShadow: '0 20px 50px rgba(0,0,0,0.7)', filter: 'contrast(1.1)' }} />
-          </motion.div>
-
-          <motion.div 
-            style={{ flex: '1 1 500px' }}
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8 }}
-          >
-            <h2 style={{ fontSize: '3rem', fontWeight: 700, marginBottom: '24px', letterSpacing: '-0.02em', color: 'var(--gold-primary)' }}>Global Scale.<br/>Boutique Precision.</h2>
-            <p style={{ fontSize: '1.15rem', color: '#aaa', lineHeight: 1.8, marginBottom: '24px' }}>
-              While our roots are deeply traditional, our infrastructure is fiercely modern. We operate state-of-the-art facilities equipped with the latest footwear engineering technologies. This unique blend allows us to cater to massive bulk production without ever compromising on the meticulous detail of a single pair.
-            </p>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px', marginTop: '40px' }}>
-              <div style={{ borderLeft: '2px solid var(--gold-primary)', paddingLeft: '20px' }}>
-                <h4 style={{ fontSize: '2rem', fontWeight: 800, margin: '0 0 5px 0', color: '#ffffff' }}>5M+</h4>
-                <p style={{ color: '#777', fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Pairs Manufactured</p>
-              </div>
-              <div style={{ borderLeft: '2px solid var(--gold-primary)', paddingLeft: '20px' }}>
-                <h4 style={{ fontSize: '2rem', fontWeight: 800, margin: '0 0 5px 0', color: '#ffffff' }}>15+</h4>
-                <p style={{ color: '#777', fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Countries Served</p>
-              </div>
+            <div style={{ 
+              borderRadius: '16px', 
+              position: 'relative', 
+              zIndex: 1, 
+              background: '#FFFFFF', 
+              padding: '24px', 
+              boxShadow: '0 20px 40px rgba(0,0,0,0.5)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center'
+            }}>
+              <img 
+                src="/assets/images/product_1.jpg" 
+                alt="KS Enterprises Athletic Footwear Production" 
+                style={{ width: '100%', maxHeight: '420px', objectFit: 'contain' }} 
+              />
             </div>
           </motion.div>
         </div>
       </section>
+
 
       {/* Leadership Section */}
       <section style={{ padding: '140px 5%', maxWidth: '1200px', margin: '0 auto', textAlign: 'center' }}>
